@@ -1,0 +1,1424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0032)https://edaplayground.com/x/efSc -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" style="overflow: hidden; height: 100%; border: none; padding: 0px; margin: 0px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta Tags -->
+    
+    <!-- Disable IE compatibility mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="index, follow" name="robots">
+    <meta content="index, follow" name="googlebot">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://edaplayground.com/img/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/jquery-ui-1.12.0.min.css">
+    <link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/layout-default-1.3.0-rc-30.79.min.css">
+    <link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/jquery.multiselect.css">
+    <link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/codemirror-4.4.0.min.css">
+    <link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/tlv-basic.css">
+    <link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/abcdef.css">
+    <link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/dialog-4.4.0.css">
+    <link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/bootstrap-3.3.7.min.css">
+    <link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/jquery.dockmodal.css">
+    <!-- Use this to override the library settings -->
+    <link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/custom.css">
+<meta content="Edit, save, simulate, synthesize SystemVerilog, Verilog, VHDL and other HDLs from your web browser." name="description">
+    <meta content="SystemVerilog IDE, Verilog IDE, VHDL IDE, online SystemVerilog editor, online Verilog editor, Verilog simulator, SystemVerilog simulator, online IDE, online code editor, verilog, SystemVerilog, VHDL, simulator, FPGA, ASIC, EDA, free" name="keywords">
+    <meta property="og:image" content="https://www.edaplayground.com/img/Playground-screenshot.png">
+    <meta property="og:title" content="EDA Playground">
+    <meta property="og:description" content="Edit, save, simulate, synthesize SystemVerilog, Verilog, VHDL and other HDLs from your web browser.">
+    <meta name="viewport" content="width=750, initial-scale=1.0">
+<title>DIGITAL DELAY TIMER - EDA Playground</title>
+
+<style type="text/css">.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q{display:block!important;border:1px solid #cdcfd2!important;background-color:#fff!important;color:#373a3d!important;width:100vw!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-24GeGuJgk9LrMLp7qVvlyz{background:#6a7e89!important;color:#fff!important;padding:10px!important;font-size:18px!important;font-family:sans-serif!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-KVjdulkCFfUZps29EbgAC{background:#f3f6f8!important;border-bottom:1px solid #cdcfd2!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-KVjdulkCFfUZps29EbgAC>*{margin-right:10px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1OeZ2PQ98oAp6Vc5mMc6V5{list-style:none!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-vCwYmWF_l83ScZBrGnRoi,.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1OeZ2PQ98oAp6Vc5mMc6V5{margin:0!important;padding:0!important;width:100%!important;display:block!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-vCwYmWF_l83ScZBrGnRoi:not(:last-child){border-bottom:1px solid #cdcfd2!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1XQZkb-FlHWABUp4_uShaZ{color:inherit!important;cursor:pointer!important;width:100%!important;display:inline-block!important;margin:10px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1XTzMvb2XKitWz0mFLlyyp{margin:5px!important;display:block!important;width:auto!important;white-space:pre!important;overflow-x:scroll!important;background:inherit!important;color:inherit!important;font-family:monospace}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1XTzMvb2XKitWz0mFLlyyp:not(.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-39QUvFFn5B7GMcqMQkOXZ3){display:none!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-295DY3nO0DbJWMsOqmjCli{background:#f5f5f5!important;color:#5a5a5a!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1aQZwu6CUzAf2zUcI7tg0Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-295DY3nO0DbJWMsOqmjCli{display:none!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-38EPFyKXMtoP12rPlmrHxs{background:#e6f7ff!important;color:#006097!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3W4ZnQjhoGfT1gTNcqRXdi .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-38EPFyKXMtoP12rPlmrHxs{display:none!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-HGYnfzlmgOZ-l7eANhQe_{background:#fff3ea!important;color:#993a00!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-24e52A11B1UIErbKHtBmqc .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-HGYnfzlmgOZ-l7eANhQe_{display:none!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-jji74ZzulHScD0OAD_G7h{background:#fef2f1!important;color:#b10823!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3npS60y-EvfF7G_lioSx2Q.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-28jAOA7cDee-95LvwGsOP- .IN-bf195e49-eb86-4856-9b9f-1c8710d456be-jji74ZzulHScD0OAD_G7h{display:none!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu{background-color:#0073b1!important;border:0!important;border-radius:2px!important;box-sizing:border-box!important;color:#fff!important;cursor:pointer!important;display:inline-block!important;font-family:-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif!important;font-weight:600!important;overflow:hidden!important;outline-width:2px!important;position:relative!important;text-align:center!important;text-decoration:none!important;vertical-align:middle!important;white-space:nowrap!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu:disabled{cursor:not-allowed!important;opacity:.7!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu:not(:disabled):not(.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1zhzkayakwEXovVYUbq5Gy):hover{background-color:#006097!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu:not(:disabled):not(.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1zhzkayakwEXovVYUbq5Gy):active{background-color:#004b7c!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1zhzkayakwEXovVYUbq5Gy{background-color:#fff!important;color:#0073b1!important;box-shadow:inset 0 0 0 1px rgba(0,0,0,.3)!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1zhzkayakwEXovVYUbq5Gy:not(:disabled):hover{color:#006097!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1zhzkayakwEXovVYUbq5Gy:not(:disabled):active{color:#004b7c!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu>xdoor-icon{display:inline-block!important;height:100%!important;vertical-align:top!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu>xdoor-icon>svg{pointer-events:none!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-7inSbaAsvG5bf7w6lJTEr{font-size:10px!important;height:16px!important;line-height:16px!important;padding:0 6px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-7inSbaAsvG5bf7w6lJTEr>xdoor-icon{margin-left:-6px!important;margin-right:3px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-7inSbaAsvG5bf7w6lJTEr>xdoor-icon>svg{height:16px!important;width:16px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-7inSbaAsvG5bf7w6lJTEr.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-2lrEjt4SOTxqrYsv1piG4c>xdoor-icon{margin-right:-6px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu,.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3uCBSbQNVNf2QjqHe1rfb6{font-size:11px!important;height:20px!important;line-height:20px!important;padding:0 7px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3uCBSbQNVNf2QjqHe1rfb6>xdoor-icon,.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu>xdoor-icon{margin-left:-7px!important;margin-right:3.5px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3uCBSbQNVNf2QjqHe1rfb6>xdoor-icon>svg,.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu>xdoor-icon>svg{height:20px!important;width:20px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-3uCBSbQNVNf2QjqHe1rfb6.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-2lrEjt4SOTxqrYsv1piG4c>xdoor-icon,.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-2lrEjt4SOTxqrYsv1piG4c>xdoor-icon{margin-right:-7px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-21Smv9YG-5V6M6KP-5v2WG{font-size:14px!important;height:24px!important;line-height:24px!important;padding:0 12px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-21Smv9YG-5V6M6KP-5v2WG>xdoor-icon{margin-left:-12px!important;margin-right:6px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-21Smv9YG-5V6M6KP-5v2WG>xdoor-icon>svg{height:24px!important;width:24px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-21Smv9YG-5V6M6KP-5v2WG.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-2lrEjt4SOTxqrYsv1piG4c>xdoor-icon{margin-right:-12px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1TGdQUTLZdNG4R87OfAB-q{font-size:16px!important;height:32px!important;line-height:32px!important;padding:0 16px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1TGdQUTLZdNG4R87OfAB-q>xdoor-icon{margin-left:-16px!important;margin-right:8px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1TGdQUTLZdNG4R87OfAB-q>xdoor-icon>svg{height:32px!important;width:32px!important}.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1G9ISYhSF8XoOmdcl0yKDu.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-1TGdQUTLZdNG4R87OfAB-q.IN-bf195e49-eb86-4856-9b9f-1c8710d456be-2lrEjt4SOTxqrYsv1piG4c>xdoor-icon{margin-right:-16px!important}</style><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style><link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/font-awesome.min(1).css"><script charset="utf-8" src="./DIGITAL DELAY TIMER - EDA Playground_files/button.e7f9415a2e000feaab02c86dd5802747.js.download"></script></head>
+<body class="playground ui-layout-container" style="overflow: auto; width: auto; height: auto; margin: 0px; position: absolute; inset: 0px; cursor: auto;">
+    <div id="loadingCover" style="display: none;">Loading...</div>
+
+    <!-- LinkedIn Plugin -->
+<script async="" src="./DIGITAL DELAY TIMER - EDA Playground_files/analytics.js.download"></script><script src="./DIGITAL DELAY TIMER - EDA Playground_files/all.js.download" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./DIGITAL DELAY TIMER - EDA Playground_files/all.js(1).download"></script><script src="./DIGITAL DELAY TIMER - EDA Playground_files/in.js.download" type="text/javascript"> lang: en_US</script>
+<!-- Facebook JDK -->    
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '514352545299672',                    // App ID from the app dashboard
+      channelUrl : '//www.edaplayground.com/static/channel.html', // Channel file for x-domain comms
+      status     : false,                                 // Check Facebook Login status
+      xfbml      : false                                  // Look for social plugins on the page
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- Hidden fields -->
+    <form style="display:none;">
+        <input id="codeRunning" type="hidden" value="0">
+        <input id="runId" type="hidden" value="e44c651e-9877-4a86-b56d-193797b82733">
+        <input id="codeUserId" type="hidden" value="491723">
+        <input id="sessionUserId" class="ignoreTogetherJS" type="hidden" value="491723">
+        <input id="codeSimulatorText" type="hidden" value="VCS 2021.09">
+        <input id="codeSimulatorNotAvailable" type="hidden">
+    </form>
+    <form style="display:none;" id="codeForm" action="https://edaplayground.com/save" method="post">
+        <input id="codeId" name="id" type="hidden" value="3607796">
+        <input id="codeName" name="name" type="hidden" value="DIGITAL DELAY TIMER">
+        <input id="codeDescription" name="description" type="hidden" value="">
+        <input id="codeLink" name="link" type="hidden" value="3607796">
+        <input id="codeModule" name="module" type="hidden">
+        <input id="codeTestbench" name="testbench" type="hidden" value="module delay_timer_tb;
+
+  reg clk;
+  reg start;
+  wire done;
+
+  // Instantiate the delay_timer module
+  delay_timer dut (
+    .clk(clk),
+    .start(start),
+    .done(done)
+  );
+
+  // Clock generation
+  always #5 clk = ~clk;
+
+  // Stimulus generation
+  initial begin
+    clk = 0;
+    start = 0;
+
+    // Dump VCD file and variables
+    $dumpfile(&quot;delay_timer_tb.vcd&quot;);
+    $dumpvars(0, delay_timer_tb);
+
+    #10 start = 1;  // Start the delay timer
+    #100 start = 0; // Stop the delay timer
+
+    #100 $finish; // End the simulation
+  end
+
+  // Monitor
+  always @(posedge clk) begin
+    if (done)
+      $display(&quot;Delay timer done at time %0t&quot;, $time);
+  end
+
+endmodule
+">
+        <input id="codeDesign" name="design" type="hidden" value="module delay_timer (
+  input wire clk,
+  input wire start,
+  output wire done
+);
+
+  reg [31:0] count;
+  reg done_reg;
+
+  always @(posedge clk) begin
+    if (start) begin
+      count &lt;= 32&#39;hFFFFFFFF;  // Set delay time to 2^32 - 1 clock cycles
+      done_reg &lt;= 0;
+    end
+    else if (count &gt; 0) begin
+      count &lt;= count - 1;
+      done_reg &lt;= 0;
+    end
+    else if (count == 0) begin
+      done_reg &lt;= 1;
+    end
+  end
+
+  assign done = done_reg;
+
+endmodule
+">
+        <input id="codeResult" name="result" type="hidden" value="&lt;span class=&quot;COMMAND&quot;&gt;[2023-06-17 10:01:04 EDT] vcs -licqueue &#39;-timescale=1ns/1ns&#39; &#39;+vcs+flush+all&#39; &#39;+warn=all&#39; &#39;-sverilog&#39; design.sv testbench.sv  &amp;amp;&amp;amp; ./simv +vcs+lic+wait  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;Warning-[LINX_KRNL] Unsupported Linux kernel&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;  Linux kernel &#39;3.13.0-71-generic&#39; is not supported.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;  Supported versions are 2.4* or 2.6*.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;                         Chronologic VCS (TM)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;            Version S-2021.09 -- Sat Jun 17 10:01:05 2023&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;                    Copyright (c) 1991 - 2021 Synopsys, Inc.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;   This software and the associated documentation are proprietary to Synopsys,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt; Inc. This software may only be used in accordance with the terms and conditions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt; of a written license agreement with Synopsys, Inc. All other use, reproduction,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;   or distribution of this software is strictly prohibited.  Licensed Products&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;     communicate with Synopsys servers for the purpose of providing software&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;    updates, detecting software piracy and verifying that customers are using&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;    Licensed Products in conformity with the applicable License Key for such&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;  Licensed Products. Synopsys will use information gathered in connection with&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;    this process to deliver software updates and pursue software pirates and&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;                                   infringers.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt; Inclusivity &amp;amp; Diversity - Visit SolvNetPlus to read the &quot;Synopsys Statement on&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;            Inclusivity and Diversity&quot; (Refer to article 000036315 at&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;                        https://solvnetplus.synopsys.com)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;Parsing design file &#39;design.sv&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;Parsing design file &#39;testbench.sv&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;Top Level Modules:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;       delay_timer_tb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;TimeScale is 1 ns / 1 ns&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;Starting vcs inline pass...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;1 module and 0 UDP read.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;recompiling module delay_timer_tb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;if [ -x ../simv ]; then chmod a-x ../simv; fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath=&#39;$ORIGIN&#39;/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/vcsmx/vcs/S-2021.09/linux/lib -L/apps/vcsmx/vcs/S-2021.09/linux/lib  -Wl,-rpath-link=./ -Wl,--no-as-needed   objs/amcQw_d.o   _321_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/vcsmx/vcs/S-2021.09/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/vcsmx/vcs/S-2021.09/linux/lib/vcs_save_restore_new.o /apps/vcsmx/vcs/S-2021.09/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;../simv up to date&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;CPU time: .168 seconds to compile + .204 seconds to elab + .194 seconds to link&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;Chronologic VCS simulator copyright 1991-2021&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;Contains Synopsys proprietary information.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;Compiler version S-2021.09; Runtime version S-2021.09;  Jun 17 10:01 2023&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;$finish called from file &quot;testbench.sv&quot;, line 29.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;$finish at simulation time                  210&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;           V C S   S i m u l a t i o n   R e p o r t &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;Time: 210 ns&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;CPU Time:      0.340 seconds;       Data structure size:   0.0Mb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;Sat Jun 17 10:01:06 2023&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;Finding VCD file...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;STDOUT&quot;&gt;./delay_timer_tb.vcd&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;COMMAND&quot;&gt;[2023-06-17 10:01:06 EDT] Opening EPWave...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;EXIT&quot;&gt;Done&lt;/span&gt;&lt;br&gt;">
+        <input id="codePermissionLevelId" name="permissionLevelId" type="hidden" value="1">
+        <input id="codeSimulatorId" name="simulatorId" type="hidden" value="1301">
+        <input id="numberOfViews" name="numberOfViews" type="hidden" value="0">
+        <input id="numberOfLikes" name="numberOfLikes" type="hidden" value="0">
+        <input id="_csrfToken" name="_csrf" value="140ffa4f-5504-49b3-9815-5c1eb717858e" class="ignoreTogetherJS _csrfToken" type="hidden">
+        <input name="properties[&#39;GHDLimportOptions&#39;].property" type="hidden" value=""><input name="properties[&#39;GHDLimportOptions&#39;].name" type="hidden" value="GHDLimportOptions"><input name="properties[&#39;GHDLmakeOptions&#39;].property" type="hidden" value=""><input name="properties[&#39;GHDLmakeOptions&#39;].name" type="hidden" value="GHDLmakeOptions"><input name="properties[&#39;GHDLrunOptions&#39;].property" type="hidden" value=""><input name="properties[&#39;GHDLrunOptions&#39;].name" type="hidden" value="GHDLrunOptions"><input name="properties[&#39;GHDLsimulatorOptions&#39;].property" type="hidden" value=""><input name="properties[&#39;GHDLsimulatorOptions&#39;].name" type="hidden" value="GHDLsimulatorOptions"><input name="properties[&#39;rivieraCompileOptions&#39;].property" type="hidden" value="-timescale 1ns/1ns"><input name="properties[&#39;rivieraCompileOptions&#39;].name" type="hidden" value="rivieraCompileOptions"><input name="properties[&#39;rivieraRunOptions&#39;].property" type="hidden" value="+access+r"><input name="properties[&#39;rivieraRunOptions&#39;].name" type="hidden" value="rivieraRunOptions"><input name="properties[&#39;rivieraRunTime&#39;].property" type="hidden" value=""><input name="properties[&#39;rivieraRunTime&#39;].name" type="hidden" value="rivieraRunTime"><input name="properties[&#39;icarusVerilogCompileOptions&#39;].property" type="hidden" value="-Wall -g2012"><input name="properties[&#39;icarusVerilogCompileOptions&#39;].name" type="hidden" value="icarusVerilogCompileOptions"><input name="properties[&#39;icarusVerilogRunOptions&#39;].property" type="hidden" value=""><input name="properties[&#39;icarusVerilogRunOptions&#39;].name" type="hidden" value="icarusVerilogRunOptions"><input name="properties[&#39;questaCompileOptions&#39;].property" type="hidden" value="-timescale 1ns/1ns"><input name="properties[&#39;questaCompileOptions&#39;].name" type="hidden" value="questaCompileOptions"><input name="properties[&#39;questaRunOptions&#39;].property" type="hidden" value="-voptargs=+acc=npr"><input name="properties[&#39;questaRunOptions&#39;].name" type="hidden" value="questaRunOptions"><input name="properties[&#39;questaRunTime&#39;].property" type="hidden" value=""><input name="properties[&#39;questaRunTime&#39;].name" type="hidden" value="questaRunTime"><input name="properties[&#39;vcsCompileOptions&#39;].property" type="hidden" value="-timescale=1ns/1ns +vcs+flush+all +warn=all -sverilog"><input name="properties[&#39;vcsCompileOptions&#39;].name" type="hidden" value="vcsCompileOptions"><input name="properties[&#39;vcsRunOptions&#39;].property" type="hidden" value=""><input name="properties[&#39;vcsRunOptions&#39;].name" type="hidden" value="vcsRunOptions"><input name="properties[&#39;incisivCompileOptions&#39;].property" type="hidden" value="-timescale 1ns/1ns -sysv"><input name="properties[&#39;incisivCompileOptions&#39;].name" type="hidden" value="incisivCompileOptions"><input name="properties[&#39;incisivRunOptions&#39;].property" type="hidden" value="-access +rw"><input name="properties[&#39;incisivRunOptions&#39;].name" type="hidden" value="incisivRunOptions"><input name="properties[epwave].name" type="hidden" value="epwave"><input name="properties[epwave].property" type="hidden" value="true"></form>
+    <form style="display:none" id="launchEpwaveForm" action="https://edaplayground.com/launchEpwave" method="post" target="LaunchEPWave">
+        <input id="launchEpwaveId" name="id" type="hidden">
+        <input id="launchEpwaveLink" name="link" type="hidden">
+        <input name="_csrf" value="140ffa4f-5504-49b3-9815-5c1eb717858e" class="ignoreTogetherJS _csrfToken" type="hidden">
+    </form>
+
+    <div id="header">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand pull-left docs-creator" title="Start a new playground" href="https://edaplayground.com/home">
+            <img src="./DIGITAL DELAY TIMER - EDA Playground_files/logo.png">
+        </a><a class="navbar-brand pull-left docs-creator" href="javascript:void(0)" style="cursor:default">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav pull-left">
+            <li style="" class="runButton"><a id="runButton" title="Run selected EDA tool (Ctrl+Enter)" class="btn btn-primary docs-creator" href="javascript:void(0)" style="display: block;"><i class="fa fa-play-circle-o"></i> Run</a></li>
+            <li style="" class="runButton"><a id="stopButton" class="btn btn-danger docs-creator" href="javascript:void(0)" style="display: none;"><i class="fa fa-stop"></i> Stop</a></li>
+            <li style="" class="runButton"><p>&nbsp;</p></li>
+            <li style="" class="saveButton"><a id="saveButton" title="Save this playground (Ctrl+S)" class="btn btn-primary docs-creator" href="javascript:void(0)"><i class="fa fa-pencil"></i><i class="fa fa-spinner fa-spin" style="font-size:12px"></i> Save<sup><i style="display: none;" class="fa fa-asterisk changeIndicator"></i></sup></a></li>
+            <li style="" class="saveButton"><p>&nbsp;</p></li>
+            <li style="" class="copyButton"><a id="copyButton" title="Make a copy of this playground" class="btn btn-primary docs-creator" href="javascript:void(0)"><i class="fa fa-copy"></i> Copy<sup><i style="display: none;" class="fa fa-asterisk changeIndicator"></i></sup></a></li>
+            <li style="" class="copyButton"><p>&nbsp;</p></li>
+            <li style="display:none" class="submitButton"><a id="submitButton" title="Submit the exercise" class="btn btn-primary docs-creator" href="javascript:void(0)"><i class="fa fa-share-square"></i> Submit</a></li>
+            <li style="display:none" class="submitButton"><p>&nbsp;</p></li>
+            <li class="siteMessage"><div data-toggle="tooltip" title="" style="width: 50px;white-space: nowrap;"><span></span></div></li>
+            <li class="siteMessage"><p>&nbsp;</p></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+            <li>
+                  <a style="padding:1px 0px" href="https://www.doulos.com/webinars/dealing-with-complexity-in-formal-through-abstraction-and-reduction/?source=edap" target="_blank" class="docs-creator"><img style="max-height: 70px;" src="./DIGITAL DELAY TIMER - EDA Playground_files/eda-playground-advert_complex_formal.jpg"></a>
+              </li>
+              <li><p>&nbsp;</p></li>
+            <li class="editorButton"><a id="editor-shortcuts" class="btn btn-primary docs-creator" title="Editor Keyboard Shortcuts" href="https://eda-playground.readthedocs.io/en/latest/edaplayground_shortcuts.html" target="_blank"><i class="fa fa-pencil-square-o fa-lg"></i></a></li>
+            <li><a id="read-the-docs" class="btn btn-primary docs-creator" title="EDA Playground documentation" onclick="sendGA(&#39;home&#39;, &#39;home_read_the_docs&#39;);" href="http://eda-playground.readthedocs.org/" target="_blank"><i class="fa fa-question-circle fa-lg"></i></a></li>
+            <li style="" class="collaborateButton"><p>&nbsp;</p></li>
+
+            <li>
+                        <button id="playgroundsDropdown" onclick="sendGA(&#39;home&#39;, &#39;home_playgrounds_dropdown&#39;);" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-rocket"></i>&nbsp; Playgrounds
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a id="user-playgrounds-btn" onclick="sendGA(&#39;home&#39;, &#39;home_playgrounds_user&#39;);" href="https://edaplayground.com/playgrounds/user/491723" class="docs-creator">Your Playgrounds</a></li>
+                            <li><a onclick="sendGA(&#39;home&#39;, &#39;home_playgrounds_published&#39;);" href="https://edaplayground.com/playgrounds" class="docs-creator">Published Playgrounds</a></li>
+                              </ul>
+
+                    </li>
+
+                    <li>
+                        <button id="profileDropdown" onclick="sendGA(&#39;home&#39;, &#39;home_profile_dropdown&#39;);" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user-circle"></i>&nbsp; Profile
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li id="user-page-btn"><a onclick="sendGA(&#39;home&#39;, &#39;home_user_page&#39;);" href="https://edaplayground.com/user/491723" class="docs-creator">Profile</a></li>
+                            <li><a onclick="sendGA(&#39;home&#39;, &#39;home_logout&#39;);" href="https://edaplayground.com/j_spring_security_logout" class="docs-creator">Logout</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+        </div>
+    </div>
+</div> <!-- end of #header -->
+<div id="code-reopened-alert" class="alert alert-warning alert-dismissible fixed-top-alert collapse">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+          <strong>Warning!</strong> This exercise has been opened in another tab; autosave has been disabled. Close this tab or refresh to reactivate.
+    </div>
+
+    <div class="ui-layout-north ui-layout-pane ui-layout-pane-north" style="position: absolute; margin: 0px; inset: 0px 0px auto; width: auto; z-index: 0; padding: 10px; background: rgb(255, 255, 255); border: 1px solid rgb(187, 187, 187); overflow: auto; height: 40px; display: block; visibility: visible;">
+    </div>
+    <div id="leftPanel" class="ui-layout-west ui-layout-pane ui-layout-pane-west" style="position: absolute; margin: 0px; inset: 46px auto 0px 0px; height: 610px; z-index: 0; padding: 10px; background: rgb(255, 255, 255); border: 1px solid rgb(187, 187, 187); overflow: auto; width: 200px; display: block; visibility: visible;">
+      <div class="row" style="margin-top:-6px"><div class="col-md-12">
+          </div></div>
+        <div id="footer">
+    <div class="footerMask">
+        <small><font color="#143992">Brought to you by</font>
+            <a href="http://www.doulos.com/" target="_blank" onclick="trackEvent(&#39;main-sidebar&#39;,&#39;doulos-click&#39;)" class="docs-creator">
+                <img id="doulos-icon" src="./DIGITAL DELAY TIMER - EDA Playground_files/DoulosLogoBanner_EDA_PG_40.jpg">
+            </a>
+        </small>
+    </div>
+</div>
+<!-- end of #footer --><div class="row" id="left-hand-menu">
+            <div class="sectionTitle col-md-12 sectionExpandable" data-title="LanguagesLibraries" id="languageLibrariesSection">
+              <h4 class="unselectable">
+                <i class="fa fa-caret-down sectionCaret"></i>
+                  
+                &nbsp;Languages &amp; Libraries
+              </h4>
+            </div>
+            <div id="testBenchAndDesign" class="col-md-12">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Testbench + Design</strong></div>
+                    <select id="testbenchLanguage" class="form-control" size="1">
+                      <option value="SystemVerilog/Verilog">SystemVerilog/Verilog</option>
+                      <option value="VHDL">VHDL</option>
+                      <option value="Specman e + SV/Verilog">Specman e + SV/Verilog</option>
+                      <option value="Python 2.7 + Verilog/SV">Python + SV/Verilog</option>
+                      <option value="Python 2.7 only">Python only</option>
+                      <option value="C++ only">C++/SystemC</option>
+                      <option value="Perl">Perl</option>
+                      <option value="Csh">Csh</option>
+                      </select>
+                    <div id="verilogLibraries" style="display: block;">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;UVM / OVM</strong>
+                    &nbsp;
+                    <a href="http://eda-playground.readthedocs.org/en/latest/intro.html#libraries-methodologies" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                    <select id="methodologyLibrary" class="form-control" size="1">
+                      <option value="">None</option>
+                      <option value="701">UVM 1.2</option>
+                            <option value="702">UVM IEEE 1800.2-2017</option>
+                            <option value="2">UVM 1.1d</option>
+                            <option value="5">OVM 2.1.2</option>
+                            </select>
+                    <form style="display:none;">
+                      <input id="libraryNotAvailable" type="hidden" value="">
+                      <input id="libraryNotAvailableId" type="hidden" value="">
+                    </form>
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Other Libraries</strong>
+                    &nbsp;
+                    <a href="http://eda-playground.readthedocs.org/en/latest/intro.html#libraries-methodologies" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                    <select id="otherLibrary" class="form-control" size="3" multiple="multiple">
+                      <option value="">None</option>
+                      <option value="401">OVL 2.8.1</option>
+                      <option value="301">SVUnit 2.11</option>
+                      <option value="1601">SVAUnit 3.0</option>
+                      <option value="1101">ClueLib 0.2.0</option>
+                      <option value="901">svlib 0.3</option>
+                      </select>
+                    <div class="checkbox svx subSectionTitle">
+                        <label>
+                          <input id="svx" type="checkbox">Enable TL-Verilog &nbsp;<a href="http://www.redwoodeda.com/" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-info-circle"></i></a></label>
+                      </div>
+                    <div class="checkbox easier_uvm" "subsectiontitle"="">
+                        <label>
+                          <input id="easier_uvm" type="checkbox">Enable Easier UVM &nbsp;<a href="http://www.doulos.com/easier" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-info-circle"></i></a></label>
+                      </div>
+                    <div class="checkbox vunit" "subsectiontitle"="">
+                        <label>
+                          <input id="vunit" type="checkbox">Enable VUnit &nbsp;<a href="https://vunit.github.io/index.html" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-info-circle"></i></a></label>
+                      </div>
+                        <div id="vunitOptions" class="form-group" style="display: none;">
+                            <input id="vunitRunOptions" class="form-control" type="text" placeholder="VUnit Run Options" title="VUnit Run Options" value="" maxlength="255">
+                        </div>
+                    </div>
+                    <div id="vhdlLibraries" style="display: none;">
+                      <div class="subSectionTitle"><strong>&nbsp;&nbsp;Libraries</strong>
+                      &nbsp;
+                      <a href="http://eda-playground.readthedocs.org/en/latest/intro.html#libraries-methodologies" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                      <select id="vhdlLibrary" class="form-control" size="3" multiple="multiple">
+                        <option value="">None</option>
+                        <option value="401">OVL 2.8.1</option>
+                        <option value="1201">OSVVM</option>
+                        <option value="1202">UVVM</option>
+                        </select>
+                      <div id="topEntityGroup" class="form-group">
+                        <div class="subSectionTitle"><strong>&nbsp;&nbsp;Top entity</strong></div>
+                        <input id="topEntity" class="form-control" type="text" placeholder="for simulation ONLY" title="Top entity for simulation" maxlength="255">
+                        </div>
+                    <div class="checkbox vunitvhdl" "subsectiontitle"="">
+                        <label>
+                          <input id="vunitvhdl" type="checkbox">Enable VUnit &nbsp;<a href="https://vunit.github.io/index.html" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-info-circle"></i></a></label>
+                      </div>
+                        <div id="vunitVhdlOptions" class="form-group" style="display: none;">
+                            <input id="vunitVhdlRunOptions" class="form-control" type="text" placeholder="VUnit Run Options" title="VUnit Run Options" value="" maxlength="255">
+                        </div>
+                    </div>
+                    <div id="specmanLibraries" style="display: none;">
+                      <div class="subSectionTitle"><strong>&nbsp;&nbsp;Specman</strong>
+                    &nbsp;
+                    <a href="http://eda-playground.readthedocs.org/en/latest/intro.html#libraries-methodologies" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                      <select id="specmanVersion" class="form-control" size="1">
+                      <option value="1301">Specman 2020.09</option>
+                        </select>
+                    </div>
+                    <div id="pythonLibraries" style="display: none;">
+                      <strong>&nbsp;&nbsp;Methodology</strong>
+                    &nbsp;
+                    <a href="http://eda-playground.readthedocs.org/en/latest/intro.html#libraries-methodologies" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                      <select id="pythonMethodology" class="form-control" size="1">
+                      <option value="105">cocotb 1.2</option>
+                        </select>
+                    </div>
+                    <div id="pythonOnlyLibraries" style="display: none;">
+                      <strong>&nbsp;&nbsp;Methodology</strong>
+                        &nbsp;
+                        <a href="http://eda-playground.readthedocs.org/en/latest/intro.html#libraries-methodologies" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                      <select id="pythonOnlyMethodology" class="form-control" size="1">
+                      <option value="501">MyHDL 0.8</option>
+                        <option value="601">Migen X 11/29/13</option>
+                        </select>
+                      <div id="migenOptionsGroup" class="form-group">
+                        <div id="migenOptions">
+                          <strong>&nbsp;&nbsp;Top class</strong>
+                          &nbsp;
+                          <a href="http://eda-playground.readthedocs.org/en/latest/settings.html#migen-options-label" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                          <input id="topClass" class="form-control" type="text" placeholder="for synthesis" title="Top class for synthesis" maxlength="255">
+                        </div>
+                      </div>
+                    </div>
+                    <div id="cppLibraries" style="display: none;">
+                      <strong>&nbsp;&nbsp;Libraries</strong>
+                      &nbsp;
+                      <a href="http://eda-playground.readthedocs.org/en/latest/intro.html#libraries-methodologies" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                      <select id="cppLibrary" class="form-control" size="3" multiple="multiple">
+                        <option value="">None</option>
+                        <option value="804">SystemC 2.3.3</option>
+                        </select>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sectionTitle col-md-12 sectionExpandable" data-title="ToolsSimulators">
+              <h4 class="unselectable">
+                <i class="fa fa-caret-down sectionCaret"></i>
+                  
+                &nbsp;Tools &amp; Simulators
+                  <a href="http://eda-playground.readthedocs.org/en/latest/intro.html#tools-simulators" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+              </h4>
+            </div>
+            <div class="col-md-12">
+                <div id="simulatorGroup" class="form-group subSectionTitle">
+                <select id="simulator" class="form-control" size="1">
+                    <option selected="selected" disabled="disabled">Select...</option>
+                    <optgroup label="Commercial Simulators"></optgroup>
+                        <option value="1204">Aldec Riviera Pro 2022.04</option>
+                    <option value="1501">Cadence Xcelium 20.09</option>
+                    <option value="1701">Mentor Questa 2021.3</option>
+                    <option value="1301">Synopsys VCS 2021.09</option>
+                    <optgroup label="Synthesis"></optgroup>
+                        <option value="1205">Aldec SyntHESer 2022.05</option>
+                    <option value="1702">Mentor Precision 2021.1</option>
+                    <option value="603">Yosys 0.9.0</option>
+                    <option value="501">VTR 7.0</option>
+                    <optgroup label="Free Simulators"></optgroup>
+                        <option value="1601">GHDL 0.37</option>
+                    <option value="103">Icarus Verilog 0.9.7</option>
+                    <option value="8">Icarus Verilog 0.9.6</option>
+                    <option value="7">Icarus Verilog 0.10.0 11/23/14</option>
+                    <option value="9">GPL Cver 2.12.a</option>
+                    <option value="10">VeriWell 2.8.7</option>
+                    <optgroup label="Compilers"></optgroup>
+                        <option value="801">C++</option>
+                    <option value="1001">Csh</option>
+                    <option value="901">Perl</option>
+                    <option value="401">Python</option>
+                    </select>
+                </div>
+                <div id="icarusVerilog09Options" style="display: none;">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Compile Options</strong></div>
+                    <input id="icarusVerilog09CompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-Wall" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong></div>
+                    <input id="icarusVerilog09RunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="" maxlength="255">
+                </div>
+                <div id="icarusVerilogOptions" class="subSectionTitle" style="display: none;">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Compile Options</strong></div>
+                    <input id="icarusVerilogCompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-Wall -g2012" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong></div>
+                    <input id="icarusVerilogRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="" maxlength="255">
+                </div>
+                <div id="modelsimOptions" style="display: none;">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Compile Options</strong></div>
+                    <input id="modelsimCompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-timescale 1ns/1ns -mfcu +acc=rmb -sv -suppress 2181" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong></div>
+                    <input id="modelsimRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="-suppress 3829" maxlength="255">
+                    <div class="subSectionTitle"><strong style="float:left;width:44%">&nbsp;&nbsp;Run Time:</strong></div>
+                    <input id="modelsimRunTime" style="width:56%" class="form-control runTime" type="text" placeholder="10 ms" title="Number of timesteps for the simulation to run (optional)" value="" maxlength="50">
+                    <div id="modelsimUseRunDoDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="modelsimUseRunDo" type="checkbox">Use <strong>run.do</strong> Tcl file</label>
+                      </div>
+                    </div>
+                </div>
+                <div id="modelsimVhdlOptions" class="subSectionTitle" style="display: none;">
+                    <strong>&nbsp;&nbsp;Compile Options</strong>
+                    <input id="modelsimVhdlCompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-2008" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong></div>
+                    <input id="modelsimVhdlRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="" maxlength="255">
+                    <strong style="float:left;width:44%">&nbsp;&nbsp;Run Time:</strong>
+                    <input id="modelsimVhdlRunTime" style="width:56%" class="form-control runTime" type="text" placeholder="10 ms" title="Number of timesteps for the simulation to run (optional)" value="" maxlength="50">
+                </div>
+                <div id="rivieraOptions" style="display: none;">
+                    <strong>&nbsp;&nbsp;Compile Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                    <input id="rivieraCompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-timescale 1ns/1ns" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                    <input id="rivieraRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="+access+r" maxlength="255">
+                    <strong style="float:left;width:44%">&nbsp;&nbsp;Run Time:</strong>
+                    <input id="rivieraRunTime" style="width:56%" class="form-control runTime" type="text" placeholder="10 ms" title="Number of timesteps for the simulation to run (optional)" value="" maxlength="50">
+                    <div id="rivieraUseRunDoDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="rivieraUseRunDo" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.do</strong> Tcl file</label>
+                      </div>
+                    </div>
+                    <div id="rivieraUseRunBashDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="rivieraUseRunBash" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.bash</strong> shell script</label>
+                      </div>
+                    </div>
+                </div>
+                <div id="rivieraVhdlOptions" style="display: none;">
+                    <strong>&nbsp;&nbsp;Compile Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                    <input id="rivieraVhdlCompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-2019 -o" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                    <input id="rivieraVhdlRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="" maxlength="255">
+                    <strong style="float:left;width:44%">&nbsp;&nbsp;Run Time:</strong>
+                    <input id="rivieraVhdlRunTime" style="width:56%" class="form-control runTime" type="text" placeholder="10 ms" title="Number of timesteps for the simulation to run (optional)" value="" maxlength="50">
+                    <div id="rivieraVhdlUseRunDoDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="rivieraVhdlUseRunDo" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.do</strong> Tcl file</label>
+                      </div>
+                    </div>
+                    <div id="rivieraVhdlUseRunBashDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="rivieraVhdlUseRunBash" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.bash</strong> shell script</label>
+                      </div>
+                    </div>
+                </div>
+                <div id="questaOptions" style="display: none;">
+                    <strong>&nbsp;&nbsp;Compile Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                    <input id="questaCompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-timescale 1ns/1ns" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                    <input id="questaRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="-voptargs=+acc=npr" maxlength="255">
+                    <strong style="float:left;width:44%">&nbsp;&nbsp;Run Time:</strong>
+                    <input id="questaRunTime" style="width:56%" class="form-control runTime" type="text" placeholder="10 ms" title="Number of timesteps for the simulation to run (optional)" value="" maxlength="50">
+                    <div id="questaUseRunDoDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="questaUseRunDo" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.do</strong> Tcl file</label>
+                      </div>
+                    </div>
+                    <div id="questaUseRunBashDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="questaUseRunBash" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.bash</strong> shell script</label>
+                      </div>
+                    </div>
+                </div>
+                <div id="questaVhdlOptions" style="display: none;">
+                    <strong>&nbsp;&nbsp;Compile Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                    <input id="questaVhdlCompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-2008" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                    <input id="questaVhdlRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="-voptargs=+acc=npr" maxlength="255">
+                    <strong style="float:left;width:44%">&nbsp;&nbsp;Run Time:</strong>
+                    <input id="questaVhdlRunTime" style="width:56%" class="form-control runTime" type="text" placeholder="10 ms" title="Number of timesteps for the simulation to run (optional)" value="" maxlength="50">
+                    <div id="questaVhdlUseRunDoDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="questaVhdlUseRunDo" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.do</strong> Tcl file</label>
+                      </div>
+                    </div>
+                    <div id="questaVhdlUseRunBashDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="questaVhdlUseRunBash" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.bash</strong> shell script</label>
+                      </div>
+                    </div>
+                </div>
+                <div id="GHDLoptions" style="display: none;">
+                    <strong>&nbsp;&nbsp;Import Options</strong>
+                    <input id="GHDLimportOptions" class="form-control" type="text" placeholder="Import Options" title="Import Options" value="" maxlength="255">
+                    <strong>&nbsp;&nbsp;Make Options</strong>
+                    <input id="GHDLmakeOptions" class="form-control" type="text" placeholder="Make Options" title="Make Options" value="" maxlength="255">
+                    <strong>&nbsp;&nbsp;Run Options</strong>
+                    <input id="GHDLrunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="" maxlength="255">
+                    <strong>&nbsp;&nbsp;Simulator Options</strong>
+                    <input id="GHDLsimulatorOptions" class="form-control" type="text" placeholder="Simulator Options" title="Run Options" value="" maxlength="255">
+                 </div>
+                <div id="vcsOptions" style="display: block;">
+                    <strong>&nbsp;&nbsp;Compile Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                    <input id="vcsCompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-timescale=1ns/1ns +vcs+flush+all +warn=all -sverilog" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                    <input id="vcsRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="" maxlength="255">
+                    <div id="vcsUseRunDoDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="vcsUseRunDo" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.do</strong> Tcl file</label>
+                      </div>
+                    </div>
+                    <div id="vcsUseRunBashDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="vcsUseRunBash" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.bash</strong> shell script</label>
+                      </div>
+                    </div>
+                </div>
+                <div id="vcsVhdlOptions" style="display: none;">
+                    <strong>&nbsp;&nbsp;Compile Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                    <input id="vcsVhdlCompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-vhdl08" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                    <input id="vcsVhdlRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="" maxlength="255">
+                    <div id="vcsVhdlUseRunDoDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="vcsVhdlUseRunDo" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.do</strong> Tcl file</label>
+                      </div>
+                    </div>
+                    <div id="vcsVhdlUseRunBashDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="vcsVhdlUseRunBash" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.bash</strong> shell script</label>
+                      </div>
+                    </div>
+                </div>
+                <div id="incisivOptions" style="display: none;">
+                    <strong>&nbsp;&nbsp;Compile Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                    <input id="incisivCompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-timescale 1ns/1ns -sysv" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                    <input id="incisivRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="-access +rw" maxlength="255">
+                    <div id="incisivUseRunDoDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="incisivUseRunDo" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.do</strong> Tcl file</label>
+                      </div>
+                    </div>
+                    <div id="incisivUseRunBashDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="incisivUseRunBash" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.bash</strong> shell script</label>
+                      </div>
+                    </div>
+                </div>
+                <div id="incisivVhdlOptions" style="display: none;">
+                    <strong>&nbsp;&nbsp;Compile Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a>
+                    <input id="incisivVhdlCompileOptions" class="form-control" type="text" placeholder="Compile Options" title="Compile Options" value="-v200x" maxlength="255">
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong>
+                    <a href="http://eda-playground.readthedocs.org/en/latest/compile_run_options.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></div>
+                    <input id="incisivVhdlRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="-access +rw" maxlength="255">
+                    <div id="incisivVhdlUseRunDoDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="incisivVhdlUseRunDo" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.do</strong> Tcl file</label>
+                      </div>
+                    </div>
+                    <div id="incisivVhdlUseRunBashDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="incisivVhdlUseRunBash" class="radioCheckbox" type="checkbox" name="tclBashSelect">Use <strong>run.bash</strong> shell script</label>
+                      </div>
+                    </div>
+                </div>
+                <div id="yosysOptions" style="display: none;">
+                  <select id="yosysSynthesisOptions" multiple="" style="display: none;">
+                    <option value="yosysABC"> use ABC with cell library</option>
+                    <option value="yosysMemoryNoMap"> memory -nomap</option>
+                    <option value="yosysFsmNoMap"> fsm -nomap</option>
+                    <option value="yosysFsmSkip"> skip FSM step</option>
+                  </select><button type="button" class="ui-multiselect ui-widget ui-state-default ui-corner-all yosysSynthesisOptions" aria-haspopup="true" style="width: 175px;"><span class="ui-icon ui-icon-triangle-1-s"></span><span>Synthesis options</span></button>
+                  <div id="yosysUseRunDoDiv" class="form-group">
+                    <div class="checkbox">
+                      <label>
+                        <input id="yosysUseRunDo" type="checkbox">Use <strong>run.ys</strong> file instead</label>
+                    </div>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input id="yosysShow" type="checkbox" class="anotherRadioCheckbox" name="epwaveZipSelect">Show <strong>diagram</strong> after run <a href="http://eda-playground.readthedocs.org/en/latest/yosys-circuit-diagrams.html" style="text-decoration:none; font-size:13px" target="_blank" class="docs-creator"><i class="fa fa-question-circle"></i></a></label>
+                  </div>
+                </div>
+                <div id="precisionOptions" style="display: none;">
+                  <div class="checkbox">
+                    <label>
+                      <input id="precisionShow" type="checkbox" class="anotherRadioCheckbox" name="epwaveZipSelect">Show <strong>netlist</strong> after run </label>
+                  </div>
+                </div>
+                <div id="hesSyntheserOptions" style="display: none;">
+                  <div class="checkbox">
+                    <label>
+                      <input id="hesSyntheserShow" type="checkbox" class="anotherRadioCheckbox" name="epwaveZipSelect">Show <strong>diagram</strong> after run </label>
+                  </div>
+                </div>
+                <div id="tlvOptions" style="display: none;">
+                  <div class="checkbox">
+                    <label>
+                      <input id="tlvShow" type="checkbox" class="radioCheckbox">Show <strong>HTML</strong> after run</label>
+                  </div>
+                </div>
+                <div id="cppOptions" style="display: none;">
+                    <strong>&nbsp;&nbsp;Compile Options</strong>
+                    <input id="cppCompileOptions" class="form-control" type="text" placeholder="-DSC_INCLUDE_FX" title="Compile Options" value="" maxlength="255">
+                    <select id="cppStandard" name="C++ standard">
+                      <option> Select...</option>
+                      <option value="cpp98"> C++98</option>
+                      <option value="cpp03"> C++03</option>
+                      <option value="cpp11"> C++11</option>
+                      <option value="cpp14"> C++14</option>
+                      <option value="cpp17"> C++17</option>
+                    </select>
+                    <div id="cppPedanticWallDiv" class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input id="cppPedanticWall" type="checkbox">Use <strong>-pedantic -Wall -Wextra</strong></label>
+                      </div>
+                    </div>
+                    <div class="subSectionTitle"><strong>&nbsp;&nbsp;Run Options</strong></div>
+                    <input id="cppRunOptions" class="form-control" type="text" placeholder="Run Options" title="Run Options" value="" maxlength="255">
+                </div>
+                <div id="perlOptions" style="display: none;">
+                    <strong>&nbsp;&nbsp;Arguments</strong>
+                    <input id="perlArgs" class="form-control" type="text" placeholder="" title="Arguments" value="" maxlength="255">
+                </div>
+                <div id="cshOptions" style="display: none;">
+                    <strong>&nbsp;&nbsp;Arguments</strong>
+                    <input id="cshArgs" class="form-control" type="text" placeholder="" title="Arguments" value="" maxlength="255">
+                </div>
+                <div id="pandaOptions" style="display: none;">
+                    <div id="moduleDiv" class="form-group">
+                        <div class="controls">
+                            <input id="module" class="form-control" type="text" placeholder="Top Module" title="Top Module" value="" maxlength="50">
+                        </div>
+                    </div>
+                </div>
+                <div id="openEpwave" class="form-group" style="display: block;">
+                  <div class="checkbox">
+                    <label>
+                        <input id="openEpwaveAfterRun" class="anotherRadioCheckbox" type="checkbox" name="epwaveZipSelect">Open <strong>EPWave</strong> after run</label>
+                    </div>
+                  </div>
+                <div id="DownloadResultZip" class="form-group">
+                  <div class="checkbox">
+                    <label>
+                        <input id="resultZip" class="anotherRadioCheckbox" type="checkbox" name="epwaveZipSelect" checked="">Download files after run</label>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+                <div id="examples-heading" onclick="sendGA(&#39;home&#39;,&#39;home_example_heading&#39;);" class="sectionTitle col-md-12 sectionExpandable" data-title="Examples">
+                  <h4 class="unselectable">
+                    <i class="fa fa-caret-right sectionCaret"></i>
+                      
+                    &nbsp;Examples
+                  </h4>
+                </div>
+                <div class="col-md-12" style="display:none">
+                    <div id="examples">
+                      <a href="https://edaplayground.com/playgrounds?searchString=[EDAPEX]&amp;language=&amp;simulator=&amp;methodologies=&amp;_libraries=on&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          using EDA Playground
+                      </a>
+                        <br>
+                      <a href="https://edaplayground.com/playgrounds?searchString=&amp;language=VHDL&amp;simulator=&amp;methodologies=&amp;_libraries=on&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          VHDL
+                      </a>
+                        <br>
+                      <a id="Verilog" href="https://edaplayground.com/playgrounds?searchString=&amp;language=SystemVerilog%2FVerilog&amp;simulator=&amp;methodologies=&amp;_libraries=on&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          Verilog/SystemVerilog
+                      </a>
+                        <br>
+                      <a href="https://edaplayground.com/playgrounds?searchString=&amp;language=SystemVerilog%2FVerilog&amp;simulator=&amp;methodologies=UVM&amp;_libraries=on&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          UVM
+                      </a>
+                        <br>
+                      <a href="https://edaplayground.com/playgrounds?searchString=&amp;language=SystemVerilog%2FVerilog&amp;simulator=&amp;methodologies=&amp;_libraries=on&amp;_svx=on&amp;easierUVM=true&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          EasierUVM
+                      </a>
+                        <br>
+                      <a href="https://edaplayground.com/playgrounds?searchString=&amp;language=&amp;simulator=&amp;methodologies=&amp;libraries=SVAUnit&amp;_libraries=on&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          SVAUnit
+                      </a>
+                        <br>
+                      <a href="https://edaplayground.com/playgrounds?searchString=&amp;language=&amp;simulator=&amp;methodologies=&amp;libraries=SVUnit&amp;_libraries=on&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          SVUnit
+                      </a>
+                        <br>
+                      <a href="https://edaplayground.com/playgrounds?searchString=&amp;language=&amp;simulator=&amp;methodologies=&amp;libraries=VUnit&amp;_libraries=on&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          VUnit
+                      </a>
+                        <br>
+                      <a href="https://edaplayground.com/playgrounds?searchString=&amp;language=&amp;simulator=&amp;methodologies=&amp;_libraries=on&amp;svx=true&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          TL-Verilog
+                      </a>
+                        <br>
+                      <a href="https://edaplayground.com/playgrounds?searchString=&amp;language=Specman+e+%2B+SV%2FVerilog&amp;simulator=&amp;methodologies=&amp;_libraries=on&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          e + Verilog
+                      </a>
+                        <br>
+                      <a href="https://edaplayground.com/playgrounds?searchString=&amp;language=Python+2.7+%2B+Verilog%2FSV&amp;simulator=&amp;methodologies=&amp;_libraries=on&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          Python + Verilog
+                      </a>
+                        <br>
+                      <a href="https://edaplayground.com/playgrounds?searchString=&amp;language=Python+2.7+only&amp;simulator=&amp;methodologies=&amp;_libraries=on&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          Python Only
+                      </a>
+                        <br>
+                      <a href="https://edaplayground.com/playgrounds?searchString=&amp;language=C%2B%2B+only&amp;simulator=&amp;methodologies=&amp;_libraries=on&amp;_svx=on&amp;_easierUVM=on&amp;curated=true&amp;_curated=on" class="docs-creator">
+                          C++/SystemC
+                      </a>
+                    </div>
+                </div>
+
+                <div id="community-heading" onclick="sendGA(&#39;home&#39;,&#39;home_community_heading&#39;);" class="sectionTitle col-md-12 sectionExpandable" data-title="Community">
+                <h4 class="unselectable">
+                    <i class="fa fa-caret-down sectionCaret"></i>
+                        
+                    &nbsp;Community
+                </h4>
+            </div>
+            <div class="col-md-12">
+                <div style="margin-left: 17px;">
+                    <a id="collaborateButton" title="Real-time collaboration with others" class="btn btn-primary btn-sidebar docs-creator" href="javascript:void(0)"><i class="fa fa-users"></i> Collaborate</a>
+                    <a style="margin-top: 8px;margin-bottom: 8px" id="forumButton" onclick="sendGA(&#39;home&#39;, &#39;home_forum&#39;);" class="btn btn-primary btn-sidebar docs-creator" title="EDA Playground forum" href="https://groups.google.com/forum/#!forum/eda-playground" target="_blank"><i class="fa fa-comment"></i> Forum</a>
+                    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 171px; height: 20px;" title="Twitter Follow Button" src="./DIGITAL DELAY TIMER - EDA Playground_files/follow_button.2b2d73daf636805223fb11d48f3e94f7.en.html" data-screen-name="edaplayground"></iframe><script async="" src="./DIGITAL DELAY TIMER - EDA Playground_files/widgets.js.download" charset="utf-8"></script>
+                </div>
+            </div>
+
+        </div>
+        <div><p></p><p>173</p></div>
+        <br>
+        </div>
+    <div id="innerLayout" class="ui-layout-center ui-layout-pane ui-layout-pane-center ui-layout-container" style="position: absolute; margin: 0px; inset: 46px 0px 0px 206px; height: 608px; width: 1328px; z-index: 0; padding: 0px; background: rgb(255, 255, 255); border: 1px solid rgb(187, 187, 187); overflow: auto; display: block; visibility: visible;">
+      <div id="testbenchTabs" class="ui-layout-west tabs code-tabs ui-layout-pane ui-layout-pane-west ui-layout-container ui-tabs ui-corner-all ui-widget ui-widget-content" style="position: absolute; margin: 0px; inset: 0px auto 576px 0px; height: 30px; z-index: 0; padding: 0px; background: rgb(255, 255, 255); border: 1px solid rgb(187, 187, 187); overflow: hidden; width: 662px; display: block; visibility: visible;">
+        <div id="testbenchTabsButtons" class="tab-buttons ui-layout-pane ui-layout-pane-north" style="position: absolute; margin: 0px; inset: 0px 0px auto; width: auto; z-index: 0; height: 27px; display: block; visibility: visible;">
+          <ul role="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header">
+            <li role="tab" tabindex="0" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-tabs-active ui-state-active" aria-controls="testbench0" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="https://edaplayground.com/x/efSc#testbench0" role="presentation" tabindex="-1" class="ui-tabs-anchor docs-creator" id="ui-id-1">testbench.sv</a></li>
+            <li id="testbenchTabsAdd" style="cursor:pointer"><i class="fa fa-plus-square-o fa-2x"></i></li>
+          </ul>
+        </div>
+        <div id="testbenchTabsPanels" class="tab-panels ui-layout-pane ui-layout-pane-center" style="position: absolute; margin: 0px; inset: 27px 0px 0px; height: 3px; width: 662px; z-index: 0; display: block; visibility: visible;">
+          <span class="pane_label" style="opacity: 0.8;">SV/Verilog Testbench</span>
+          <div id="testbench0" class="tab-panel ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false"><div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 14.8px; left: 41.8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 27px;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-vscrollbar" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 591px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 27px; min-height: 554px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>39</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 14px;">&nbsp;</div></div><div class="CodeMirror-code" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">1</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-keyword">module</span> <span class="cm-variable">delay_timer_tb</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">2</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">3</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">reg</span> <span class="cm-variable">clk</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">4</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">reg</span> <span class="cm-variable">start</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">5</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">wire</span> <span class="cm-variable">done</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">6</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">7</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-comment">// Instantiate the delay_timer module</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">8</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-variable">delay_timer</span> <span class="cm-variable">dut</span> <span class="cm-bracket">(</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">9</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  .<span class="cm-variable">clk</span><span class="cm-bracket">(</span><span class="cm-variable">clk</span><span class="cm-bracket">)</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">10</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  .<span class="cm-variable">start</span><span class="cm-bracket">(</span><span class="cm-variable">start</span><span class="cm-bracket">)</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">11</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  .<span class="cm-variable">done</span><span class="cm-bracket">(</span><span class="cm-variable">done</span><span class="cm-bracket">)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">12</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-bracket">)</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">13</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">14</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-comment">// Clock generation</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">15</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">always</span> <span class="cm-def">#5</span> <span class="cm-variable">clk</span> <span class="cm-meta">=</span> <span class="cm-meta">~</span><span class="cm-variable">clk</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">16</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">17</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-comment">// Stimulus generation</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">18</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">initial</span> <span class="cm-keyword">begin</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">19</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-variable">clk</span> <span class="cm-meta">=</span> <span class="cm-number">0</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">20</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-variable">start</span> <span class="cm-meta">=</span> <span class="cm-number">0</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">21</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">22</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-comment">// Dump VCD file and variables</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">23</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-meta">$dumpfile</span><span class="cm-bracket">(</span><span class="cm-string">"delay_timer_tb.vcd"</span><span class="cm-bracket">)</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">24</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-meta">$dumpvars</span><span class="cm-bracket">(</span><span class="cm-number">0</span>, <span class="cm-variable">delay_timer_tb</span><span class="cm-bracket">)</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">25</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">26</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-def">#10</span> <span class="cm-variable">start</span> <span class="cm-meta">=</span> <span class="cm-number">1</span>;  <span class="cm-comment">// Start the delay timer</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">27</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-def">#100</span> <span class="cm-variable">start</span> <span class="cm-meta">=</span> <span class="cm-number">0</span>; <span class="cm-comment">// Stop the delay timer</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">28</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">29</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-def">#100</span> <span class="cm-meta">$finish</span>; <span class="cm-comment">// End the simulation</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">30</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">end</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">31</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">32</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-comment">// Monitor</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 554px;"></div><div class="CodeMirror-gutters" style="height: 554px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></div>
+          </div>
+      <div id="testbenchTabsButtons-resizer" class="ui-layout-resizer ui-layout-resizer-north ui-layout-resizer-open ui-layout-resizer-north-open" style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; top: 27px; cursor: default; display: none;"></div></div>
+      <div id="designTabs" class="ui-layout-center tabs code-tabs ui-layout-pane ui-layout-pane-center ui-layout-container ui-tabs ui-corner-all ui-widget ui-widget-content" style="position: absolute; margin: 0px; inset: 0px 0px 576px 670px; height: 30px; width: 656px; z-index: 0; padding: 0px; background: rgb(255, 255, 255); border: 1px solid rgb(187, 187, 187); overflow: hidden; display: block; visibility: visible;">
+        <div id="designTabsButtons" class="tab-buttons ui-layout-pane ui-layout-pane-north" style="position: absolute; margin: 0px; inset: 0px 0px auto; width: auto; z-index: 0; height: 27px; display: block; visibility: visible;">
+          <ul role="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header">
+            <li role="tab" tabindex="0" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-tabs-active ui-state-active" aria-controls="design0" aria-labelledby="ui-id-5" aria-selected="true" aria-expanded="true"><a href="https://edaplayground.com/x/efSc#design0" role="presentation" tabindex="-1" class="ui-tabs-anchor docs-creator" id="ui-id-5">design.sv</a></li>
+            <li id="designTabsAdd" style="cursor:pointer"><i class="fa fa-plus-square-o fa-2x"></i></li>
+          </ul>
+        </div>
+        <div id="designTabsPanels" class="tab-panels ui-layout-pane ui-layout-pane-center" style="position: absolute; margin: 0px; inset: 27px 0px 0px; height: 3px; width: 656px; z-index: 0; display: block; visibility: visible;">
+          <span class="pane_label" style="opacity: 0.8;">SV/Verilog Design</span>
+          <div id="design0" class="tab-panel ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="false"><div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 14.8px; left: 41.8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 27px;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-vscrollbar" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 423px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 27px; min-height: 386px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>27</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 14px;">&nbsp;</div></div><div class="CodeMirror-code" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">1</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-keyword">module</span> <span class="cm-variable">delay_timer</span> <span class="cm-bracket">(</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">2</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">input</span> <span class="cm-keyword">wire</span> <span class="cm-variable">clk</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">3</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">input</span> <span class="cm-keyword">wire</span> <span class="cm-variable">start</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">4</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">output</span> <span class="cm-keyword">wire</span> <span class="cm-variable">done</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">5</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-bracket">)</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">6</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">7</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">reg</span> <span class="cm-bracket">[</span><span class="cm-number">31</span>:<span class="cm-number">0</span><span class="cm-bracket">]</span> <span class="cm-variable">count</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">8</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">reg</span> <span class="cm-variable">done_reg</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">9</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">10</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">always</span> @<span class="cm-bracket">(</span><span class="cm-keyword">posedge</span> <span class="cm-variable">clk</span><span class="cm-bracket">)</span> <span class="cm-keyword">begin</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">11</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-keyword">if</span> <span class="cm-bracket">(</span><span class="cm-variable">start</span><span class="cm-bracket">)</span> <span class="cm-keyword">begin</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">12</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp; &nbsp;  <span class="cm-variable">count</span> &lt;<span class="cm-meta">=</span> <span class="cm-number">32'hFFFFFFFF</span>;  <span class="cm-comment">// Set delay time to 2^32 - 1 clock cycles</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">13</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp; &nbsp;  <span class="cm-variable">done_reg</span> &lt;<span class="cm-meta">=</span> <span class="cm-number">0</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">14</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-keyword">end</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">15</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-keyword">else</span> <span class="cm-keyword">if</span> <span class="cm-bracket">(</span><span class="cm-variable">count</span> &gt; <span class="cm-number">0</span><span class="cm-bracket">)</span> <span class="cm-keyword">begin</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">16</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp; &nbsp;  <span class="cm-variable">count</span> &lt;<span class="cm-meta">=</span> <span class="cm-variable">count</span> <span class="cm-meta">-</span> <span class="cm-number">1</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">17</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp; &nbsp;  <span class="cm-variable">done_reg</span> &lt;<span class="cm-meta">=</span> <span class="cm-number">0</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">18</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-keyword">end</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">19</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-keyword">else</span> <span class="cm-keyword">if</span> <span class="cm-bracket">(</span><span class="cm-variable">count</span> <span class="cm-meta">==</span> <span class="cm-number">0</span><span class="cm-bracket">)</span> <span class="cm-keyword">begin</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">20</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp; &nbsp;  <span class="cm-variable">done_reg</span> &lt;<span class="cm-meta">=</span> <span class="cm-number">1</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">21</div></div><pre class=""><span style="padding-right: 0.1px;"> &nbsp;  <span class="cm-keyword">end</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">22</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">end</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">23</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">24</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-keyword">assign</span> <span class="cm-variable">done</span> <span class="cm-meta">=</span> <span class="cm-variable">done_reg</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">25</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">26</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-keyword">endmodule</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 18px;">27</div></div><pre class=""><span style="padding-right: 0.1px;"><span>​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 386px;"></div><div class="CodeMirror-gutters" style="height: 386px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></div>
+          </div>
+      <div id="designTabsButtons-resizer" class="ui-layout-resizer ui-layout-resizer-north ui-layout-resizer-open ui-layout-resizer-north-open" style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; top: 27px; cursor: default; display: none;"></div></div>
+      
+
+
+
+<div id="resultsPane" class="bottom-tabs tabs ui-layout-south ui-layout-pane ui-layout-pane-south ui-tabs ui-corner-all ui-widget ui-widget-content" style="position: absolute; margin: 0px; inset: auto 0px 0px; width: auto; z-index: 0; padding: 10px; background: rgb(255, 255, 255); border: 1px solid rgb(187, 187, 187); overflow: auto; height: 568px; display: block; visibility: visible;">
+  <div id="bottomTabsButtons" class="tab-buttons">
+    <ul role="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header">
+      <li role="tab" tabindex="0" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-tabs-active ui-state-active" aria-controls="results" aria-labelledby="ui-id-9" aria-selected="true" aria-expanded="true">
+        <a href="https://edaplayground.com/x/efSc#results" class="bottomTab ui-tabs-anchor docs-creator" role="presentation" tabindex="-1" id="ui-id-9">
+              <i class="fa fa-play-circle-o bottom-tab-icon"></i>
+              <span class="bottom-tab-text"> Log</span>
+        </a>
+      </li>
+      <li id="bottom-share-tab" role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="share-tab" aria-labelledby="ui-id-10" aria-selected="false" aria-expanded="false">
+          <a href="https://edaplayground.com/x/efSc#share-tab" class="bottomTab ui-tabs-anchor docs-creator" role="presentation" tabindex="-1" id="ui-id-10">
+              <i class="fa fa-share-alt bottom-tab-icon"></i>
+        <span class="bottom-tab-text"> Share</span>
+      </a>
+      </li>
+    </ul>
+  </div>
+  <div id="bottomTabsPanels" class="tab-panels">
+    <div style="height: calc(100% - 26px)">
+      <div id="results" class="tab-panel ui-tabs-panel ui-corner-bottom ui-widget-content" style="height: calc(100%); display: block;" aria-labelledby="ui-id-9" role="tabpanel" aria-hidden="false"><span class="COMMAND">[2023-06-17 10:01:04 EDT] vcs -licqueue '-timescale=1ns/1ns' '+vcs+flush+all' '+warn=all' '-sverilog' design.sv testbench.sv  &amp;&amp; ./simv +vcs+lic+wait  </span><br><span class="STDOUT"></span><br><span class="STDOUT">Warning-[LINX_KRNL] Unsupported Linux kernel</span><br><span class="STDOUT">  Linux kernel '3.13.0-71-generic' is not supported.</span><br><span class="STDOUT">  Supported versions are 2.4* or 2.6*.</span><br><span class="STDOUT"></span><br><span class="STDOUT">                         Chronologic VCS (TM)</span><br><span class="STDOUT">            Version S-2021.09 -- Sat Jun 17 10:01:05 2023</span><br><span class="STDOUT"></span><br><span class="STDOUT">                    Copyright (c) 1991 - 2021 Synopsys, Inc.</span><br><span class="STDOUT">   This software and the associated documentation are proprietary to Synopsys,</span><br><span class="STDOUT"> Inc. This software may only be used in accordance with the terms and conditions</span><br><span class="STDOUT"> of a written license agreement with Synopsys, Inc. All other use, reproduction,</span><br><span class="STDOUT">   or distribution of this software is strictly prohibited.  Licensed Products</span><br><span class="STDOUT">     communicate with Synopsys servers for the purpose of providing software</span><br><span class="STDOUT">    updates, detecting software piracy and verifying that customers are using</span><br><span class="STDOUT">    Licensed Products in conformity with the applicable License Key for such</span><br><span class="STDOUT">  Licensed Products. Synopsys will use information gathered in connection with</span><br><span class="STDOUT">    this process to deliver software updates and pursue software pirates and</span><br><span class="STDOUT">                                   infringers.</span><br><span class="STDOUT"></span><br><span class="STDOUT"> Inclusivity &amp; Diversity - Visit SolvNetPlus to read the "Synopsys Statement on</span><br><span class="STDOUT">            Inclusivity and Diversity" (Refer to article 000036315 at</span><br><span class="STDOUT">                        https://solvnetplus.synopsys.com)</span><br><span class="STDOUT"></span><br><span class="STDOUT">Parsing design file 'design.sv'</span><br><span class="STDOUT">Parsing design file 'testbench.sv'</span><br><span class="STDOUT">Top Level Modules:</span><br><span class="STDOUT">       delay_timer_tb</span><br><span class="STDOUT">TimeScale is 1 ns / 1 ns</span><br><span class="STDOUT">Starting vcs inline pass...</span><br><span class="STDOUT"></span><br><span class="STDOUT">1 module and 0 UDP read.</span><br><span class="STDOUT">recompiling module delay_timer_tb</span><br><span class="STDOUT">rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so</span><br><span class="STDOUT">if [ -x ../simv ]; then chmod a-x ../simv; fi</span><br><span class="STDOUT">g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/vcsmx/vcs/S-2021.09/linux/lib -L/apps/vcsmx/vcs/S-2021.09/linux/lib  -Wl,-rpath-link=./ -Wl,--no-as-needed   objs/amcQw_d.o   _321_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/vcsmx/vcs/S-2021.09/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/vcsmx/vcs/S-2021.09/linux/lib/vcs_save_restore_new.o /apps/vcsmx/vcs/S-2021.09/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl </span><br><span class="STDOUT">../simv up to date</span><br><span class="STDOUT">CPU time: .168 seconds to compile + .204 seconds to elab + .194 seconds to link</span><br><span class="STDOUT">Chronologic VCS simulator copyright 1991-2021</span><br><span class="STDOUT">Contains Synopsys proprietary information.</span><br><span class="STDOUT">Compiler version S-2021.09; Runtime version S-2021.09;  Jun 17 10:01 2023</span><br><span class="STDOUT">$finish called from file "testbench.sv", line 29.</span><br><span class="STDOUT">$finish at simulation time                  210</span><br><span class="STDOUT">           V C S   S i m u l a t i o n   R e p o r t </span><br><span class="STDOUT">Time: 210 ns</span><br><span class="STDOUT">CPU Time:      0.340 seconds;       Data structure size:   0.0Mb</span><br><span class="STDOUT">Sat Jun 17 10:01:06 2023</span><br><span class="STDOUT">Finding VCD file...</span><br><span class="STDOUT">./delay_timer_tb.vcd</span><br><span class="COMMAND">[2023-06-17 10:01:06 EDT] Opening EPWave...</span><br><span class="EXIT">Done</span><br></div>
+      <div id="share-tab" class="tab-panel ui-tabs-panel ui-corner-bottom ui-widget-content" style="height: calc(100%); display: none;" aria-labelledby="ui-id-10" role="tabpanel" aria-hidden="true">
+          <form id="detailsForm" style="height: calc(100% - 50px); margin-bottom: 29px;">
+
+              <div style="margin-bottom: 5px;">
+                    <span style="" class="shareButton"><a id="twitterShareTab" title="Share this playground with others" onclick="twitterIconPressed();" href="javascript:void(0)" class="docs-creator"><img class="shareIcon" src="./DIGITAL DELAY TIMER - EDA Playground_files/Twitter_Social_Icon_Rounded_Square_Color.png"></a></span>
+                    <span style="" class="shareButton"><a id="facebookShareTab" title="Share this playground with others" onclick="sendGA(&#39;home&#39;,&#39;share_facebook&#39;);" href="javascript:void(0)" class="docs-creator"><img class="shareIcon" src="./DIGITAL DELAY TIMER - EDA Playground_files/FB-f-Logo__blue_72.png"></a></span>
+                    <span style="" class="shareButton"><a id="linkedInShareTab" title="Share this playground with others" onclick="linkedInIconPressed();" href="javascript:void(0)" class="docs-creator"><img class="shareIcon" src="./DIGITAL DELAY TIMER - EDA Playground_files/In-2C-115px-TM.png"></a></span>
+                    <span style="" class="shareButton"><a id="copyShareTab" title="Share this playground with others" onclick="copyLink();" href="javascript:void(0)" class="docs-creator"><img class="shareIcon" src="./DIGITAL DELAY TIMER - EDA Playground_files/copy_link.png"></a></span>
+                    <span style="display:none" class="shareButtonLink"><input id="linkShareTab" type="text" title="Share this playground with others" onclick="this.select();"></span>
+                    <span style="display:none" class="submitButton"><a id="submitButton" title="Submit the exercise" class="btn btn-primary docs-creator" href="javascript:void(0)"><i class="fa fa-share-square"></i> Submit</a></span>
+
+                  <span>
+                      
+                          
+                          
+                              <input style="width: 300px; margin-left: 7px; margin-right: 7px;" id="name" class="bottom-section-text" type="text" placeholder="Add a title to help you find your playground" title="Name" value="DIGITAL DELAY TIMER" maxlength="50">
+                          
+                      
+                    </span>
+                  
+                      <span>
+                          <span id="numberViews" style="font-weight: bold">0</span> views
+                          and <span id="numberLikes" style="font-weight: bold">0</span> likes &nbsp;<a href="javascript:void(0)" class="docs-creator"><i id="likeButton" style="font-size: 18px" class="fa fa-thumbs-o-up"></i></a>&nbsp;
+                      </span>
+                  
+                  <span>
+                        <select id="permissionLevelId" value="1">
+                            <option selected="selected" value="1">Public (anyone with the link can view)</option>
+                            <option value="2">Published (will appear in search results)</option>
+                            <option value="0">Private (only you can view)</option>
+                            
+                        </select>
+                    </span>
+                    &nbsp;
+                    <span style="" class="saveButton"><a id="saveBottomButton" title="Save this playground (Ctrl+S)" class="btn btn-primary docs-creator" href="javascript:void(0)"><i class="fa fa-pencil"></i> Save<sup><i style="display: none;" class="fa fa-asterisk changeIndicator"></i></sup></a></span>
+
+              </div>
+
+              <textarea style="height: calc(100% - 30px); display: none; border: 1px solid rgb(255, 165, 0);" id="description" class="form-control bottom-section-text" rows="1" placeholder="A short description will be helpful for you to remember your playground&#39;s details" title="Description" maxlength="2000"></textarea><div class="editor-toolbar"><a title="Bold (Ctrl-B)" tabindex="-1" class="fa fa-bold docs-creator"></a><a title="Italic (Ctrl-I)" tabindex="-1" class="fa fa-italic docs-creator"></a><a title="Heading (Ctrl-H)" tabindex="-1" class="fa fa-header docs-creator"></a><i class="separator">|</i><a title="Quote (Ctrl-&#39;)" tabindex="-1" class="fa fa-quote-left docs-creator"></a><a title="Generic List (Ctrl-L)" tabindex="-1" class="fa fa-list-ul docs-creator"></a><a title="Numbered List (Ctrl-Alt-L)" tabindex="-1" class="fa fa-list-ol docs-creator"></a><i class="separator">|</i><a title="Create Link (Ctrl-K)" tabindex="-1" class="fa fa-link docs-creator"></a><i class="separator">|</i><a title="Toggle Preview (Ctrl-P)" tabindex="-1" class="fa fa-eye no-disable docs-creator"></a><i class="separator">|</i><a title="Markdown Guide" tabindex="-1" class="fa fa-question-circle docs-creator" href="https://simplemde.com/markdown-guide" target="_blank"></a></div><div class="CodeMirror cm-s-paper CodeMirror-wrap CodeMirror-empty"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 14.8px; left: 14.8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: -17px; border-right-width: 13px; min-height: 22px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><pre class="CodeMirror-placeholder" style="height: 0px; overflow: visible;">A short description will be helpful for you to remember your playground's details</pre><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 14px;">&nbsp;</div></div><div class="CodeMirror-code"><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 35px;"></div></div></div><div class="editor-preview-side"></div><div class="editor-statusbar"><span class="autosave"></span><span class="lines">1</span><span class="words">0</span><span class="cursor">0:0</span></div>
+          </form>
+    </div>
+    </div>
+  </div>
+</div><div class="ui-layout-resizer ui-layout-resizer-south ui-draggable-handle ui-layout-resizer-open ui-layout-resizer-south-open" title="Resize" style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; background: url(&quot;/img/handle-h.png&quot;) center 50% no-repeat scroll transparent; border: none; cursor: s-resize; bottom: 570px; width: 1328px; height: 6px; left: 0px;"></div><div id="" class="ui-layout-resizer ui-layout-resizer-west ui-draggable-handle ui-layout-resizer-open ui-layout-resizer-west-open" title="Resize" style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; background: url(&quot;/img/handle-v.png&quot;) center 50% no-repeat scroll transparent; border: none; cursor: w-resize; left: 664px; height: 32px; width: 6px; top: 0px;"></div></div>
+
+    <!-- Tab dialogs -->
+    
+    
+    
+    
+
+    
+    
+
+    <!-- Modals -->
+    <div id="appsModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="appsModalLabel" aria-hidden="true">
+    <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="appsModalLabel">Available Apps</h3>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <li>
+          <a href="https://edaplayground.com/home" class="docs-creator">EDA Playground</a>
+        </li>
+        <li>
+          <a href="https://edaplayground.com/w/home" class="docs-creator">EPWave</a>
+        </li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+    </div></div>
+</div>
+
+<div id="alertModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+    <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="alertModalLabel">Error</h3>
+    </div>
+    <div class="modal-body">
+        <p id="alertModalText" class="text-error"></p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+    </div></div>
+</div>
+
+
+<div id="infoModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="infoModalLabel">Info</h3>
+    </div>
+    <div class="modal-body" id="infoModalBody">
+    </div>
+    <div class="modal-footer">
+        <button id="modalCloseButton" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+    </div></div>
+</div>
+
+<div id="exampleModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="exampleModalLabel">EPWave Examples</h3>
+    </div>
+    <div class="modal-body">
+      <ul>
+      <li>
+          <a href="https://edaplayground.com/w/s/example/2" class="docs-creator">Trivial Example</a>
+        </li>
+      <li>
+          <a href="https://edaplayground.com/w/s/example/4" class="docs-creator">RAM from EDA Playground</a>
+        </li>
+      <li>
+          <a href="https://edaplayground.com/w/s/example/1" class="docs-creator">OpenCores Example</a>
+        </li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+    </div></div>
+</div>
+<div id="validationModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Validation Error</h3>
+        </div>
+        <div class="modal-body">
+            <p id="validationModalText" class="text-error"></p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+        </div></div>
+    </div>
+
+    <div id="validatedAccessRequiredModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">User Validation Required</h3>
+        </div>
+        <div class="modal-body">
+             <p id="validationModalText" class="text-error">Your account is not validated. If you wish to use commercial simulators, you need a validated account.
+                                                            <br>
+                                                            <br>
+                                                            If you have already registered (or have recently changed your email address), but have not clicked on the link in the email we sent you, please do so. If you cannot find the email, please check your spam/junk folder. Or <a href="https://edaplayground.com/resendConfirmation" id="resend" class="docs-creator">click here</a> to resend the email.
+                                                            <br>
+                                                            <br>
+                                                            If you have not already registered for a full account, you can do so by clicking below. You will then need to provide us with some identification information. <b>You may wish to save your code first</b>.</p>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-primary docs-creator" title="Validate your account for premium access" href="https://edaplayground.com/validate">Validate your account</a>
+        </div>
+        </div></div>
+    </div>
+
+    <div id="tabOperationsNotSupportedModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="tabOperationsNotSupportedModalLabel" aria-hidden="true">
+        <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="tabOperationsNotSupportedModalLabel">Not Supported During Collaboration</h3>
+        </div>
+        <div class="modal-body">
+            <p id="tabOperationsNotSupportedModalText" class="text-error">Creating, deleting, and renaming files is not supported during Collaboration. To encourage development of these features for Collaboration, tweet to <a target="_blank" href="https://twitter.com/edaplayground" class="docs-creator">@EDAPlayground</a></p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+        </div></div>
+    </div>
+
+    <div id="logInModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel" aria-hidden="true">
+        <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="logInModalLabel">Please Log In</h3>
+        </div>
+        <div class="modal-body">
+            <p id="logInModalText" class="text-error"></p>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-primary docs-creator" title="Log in and save your code edits in a new playground" id="login-save-edits" href="javascript:void(0)" onclick="code.forceSave()">Log In (save edits)&nbsp;<i class="fa fa-sign-in"></i></a>
+            <a class="btn btn-warning docs-creator" title="Log in and discard any code edits" href="https://edaplayground.com/login" onclick="trackEvent(&#39;home&#39;,&#39;home_run_loginNoSave&#39;)">Log In (no save)&nbsp;<i class="fa fa-sign-in"></i></a>
+            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+        </div></div>
+    </div>
+
+    <div id="saveCollaborationModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="saveCollaborationModalLabel" aria-hidden="true">
+        <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="saveCollaborationModalLabel">Please Save</h3>
+        </div>
+        <div class="modal-body">
+            <p id="saveCollaborationModalText" class="text-error">This playground may have been modified. Please save or copy before starting collaboration.</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+        </div></div>
+    </div>
+
+    <div id="shareModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+        <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="shareModalLabel">Share Your Playground</h3>
+        </div>
+        <div class="modal-body">
+            <form>
+                <label>Share Link</label>
+                <div class="col-md-12" style="padding: 0px 0px 15px">
+                  <input id="shareLink" class="form-control" type="text" value="http://www.edaplayground.com/x/efSc">
+                </div>
+            </form>
+            <a id="shareOnTwitter" target="_blank" title="Click to send this page to Twitter!" class="btn btn-sm btn-default docs-creator" href="https://edaplayground.com/x/efSc"><i class="fa fa-twitter"></i> Share on Twitter</a>
+                <br>
+                <br>
+                <a id="shareOnFacebook" title="Click to share this page on Facebook!" class="btn btn-sm btn-default docs-creator" href="https://edaplayground.com/x/efSc#" onclick="return false;"><i class="fa fa-facebook-square"></i> Share on Facebook</a>
+                <br>
+                <br>
+                <div id="linkedIn"></div>
+            </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+        </div></div>
+    </div>
+
+    <div id="submitModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel" aria-hidden="true">
+        <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="submitModalLabel">Submit Your Exercise</h3>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="alert alert-warning" role="alert">
+                  <strong>Warning!</strong>
+                  Course not selected. Recommend selecting a course on the left panel before submitting.
+                </div>
+                <input id="courseId" type="hidden" value="0">
+              <label>To</label>
+            <div class="col-md-12" style="padding: 0px 0px 15px">
+              </div>
+            <label>Exercise Name</label>
+            <div class="col-md-8" style="padding: 0px 0px 15px">
+                <div id="labName">DIGITAL DELAY TIMER</div>
+            </div>
+            <label>Link</label>
+            <div class="col-md-8" style="padding: 0px 0px 15px">
+            <div id="submitLinkDiv">http://www.edaplayground.com/x/efSc</div>
+            <input id="submitLink" type="hidden" value="http://www.edaplayground.com/x/efSc">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+            <button id="submitLabButton" class="btn btn-primary" aria-hidden="true">Submit</button>
+        </div>
+        </div></div>
+    </div>
+
+    <div id="submitSuccessModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="submitSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="submitSuccessModalLabel">Success</h3>
+        </div>
+        <div class="modal-body">
+            <p id="deleteSuccessModalText" class="text-success">Your exercise has been submitted.</p>
+            <br>
+        </div>
+        <div class="modal-footer">
+            <button id="success-close" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+        </div></div>
+    </div>
+
+    <div class="modal-placeholder"></div>
+
+    <!-- External JS -->
+<!-- jQuery library -->
+<script src="./DIGITAL DELAY TIMER - EDA Playground_files/jquery-2.0.3.min.js.download"></script>
+<script>window.jQuery || document.write('<script src="/js/lib/cdn/jquery-2.0.3.min.js"><\/script>');</script>
+
+<!-- Bootstrap -->
+<script src="./DIGITAL DELAY TIMER - EDA Playground_files/bootstrap.min.js.download"></script>
+<script>window.$.fn.modal || document.write('<script src="/js/lib/cdn/bootstrap-3.3.7.min.js"><\/script>');</script>
+
+<!-- Underscore -->
+<script src="./DIGITAL DELAY TIMER - EDA Playground_files/underscore-min.js.download"></script>
+<script>window._ || document.write('<script src="/js/lib/cdn/underscore-1.5.1.min.js"><\/script>');</script>
+
+<!-- Moment -->
+<script src="./DIGITAL DELAY TIMER - EDA Playground_files/moment.min.js.download"></script>
+<script>window.moment || document.write('<script src="/js/lib/cdn/moment-2.2.1.min.js"><\/script>');</script>
+
+<!-- Main JS -->
+<script src="./DIGITAL DELAY TIMER - EDA Playground_files/utils.js.download"></script>
+
+<!-- jQuery UI, needed for jQuery UI Layout and multiselect for EDA Playground, and File Upload for EPWave -->
+<script src="./DIGITAL DELAY TIMER - EDA Playground_files/jquery-ui.min.js.download"></script>
+<script>window.$.widget || document.write('<script src="/js/lib/cdn/jquery-ui-1.12.0.min.js"><\/script>');</script>
+
+<!--  jQuery-File-Upload -->
+<script src="./DIGITAL DELAY TIMER - EDA Playground_files/jquery.fileupload.js.download"></script>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-42610436-1', 'edaplayground.com');
+  ga('send', 'pageview');
+</script>
+<link rel="stylesheet" href="./DIGITAL DELAY TIMER - EDA Playground_files/simplemde.min.css">
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/simplemde.min.js.download"></script>
+
+    <!-- jQuery UI MultiSelect plugin -->
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/jquery.multiselect.js.download"></script>
+    <!-- jQuery UI Layout plugin -->
+    <!-- 1.3.0-rc30.79 plus fix from https://groups.google.com/forum/?fromgroups#!topic/jquery-ui-layout/EQDnO-TXgKo -->
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/jquery.layout-1.4.4.js.download"></script>
+
+    <!-- CodeMirror -->
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/codemirror.min.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/matchbrackets.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/dialog.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/searchcursor.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/search.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/comment.js.download"></script>
+    <!--
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.4.0/mode/verilog/verilog.js"></script>
+     -->
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/python.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/clike.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/perl.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/shell.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/vim.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/emacs.js.download"></script>
+    <script>
+      if (!window.CodeMirror) {
+        document.write('<script src="/js/lib/cdn/codemirror/codemirror-4.4.0.min.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/matchbrackets-4.4.0.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/dialog-4.4.0.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/searchcursor-4.4.0.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/search-4.4.0.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/comment-4.4.0.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/verilog-4.4.0.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/python-4.4.0.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/clike-4.4.0.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/perl-4.4.0.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/shell-4.4.0.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/vim-4.4.0.js"><\/script>');
+        document.write('<script src="/js/lib/cdn/codemirror/emacs-4.4.0.js"><\/script>');
+      }
+    </script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/verilog-4.4.0.fix.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/vhdl.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/simple.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/e-mode.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/tlverilog.js.download"></script>
+    <script defer="defer" src="./DIGITAL DELAY TIMER - EDA Playground_files/jquery.dockmodal.js.download"></script>
+
+    <!-- TogetherJS -->
+    <script>
+
+    //Course delegates only want to see togetherjs when theyre in a lab; this clears their togetherjs session if theyve already created one by going to a lab
+    
+
+   var togetherJsMessageReceived =  function (msg) {
+        document.title='New Message';
+
+        if (("Notification" in window) && Notification.permission === "granted") {
+            var notification = new Notification(msg.peer.name, {
+                                 body: msg.text,
+                                 icon: msg.peer.avatar
+                               });
+          }
+   };
+
+     //Set up event handler to reset window title when tab is visited
+     window.addEventListener("focus", function(event)
+        {
+           document.title="DIGITAL DELAY TIMER - EDA Playground";
+        }, false);
+
+   var togetherJsMessageReceived =  function (msg) {
+        document.title='New Message';
+
+        if (("Notification" in window) && Notification.permission === "granted") {
+            var notification = new Notification(msg.peer.name, {
+                                 body: msg.text,
+                                 icon: msg.peer.avatar
+                               });
+          }
+   };
+
+     //Set up event handler to reset window title when tab is visited
+     window.addEventListener("focus", function(event)
+        {
+           document.title="DIGITAL DELAY TIMER - EDA Playground";
+        }, false);
+
+    var TogetherJSConfig_toolName = 'Collaboration',
+        TogetherJSConfig_siteName = 'EDA Playground',
+        TogetherJSConfig_youtube = false,
+
+        
+            TogetherJSConfig_cloneClicks = '.sectionExpandable, .sectionExpandable *, .ui-widget, #examples *, #tabOperationsNotSupportedModal *, #innerLayout *',
+            TogetherJSConfig_ignoreForms = [":password", ".ignoreTogetherJS"],
+          
+
+        TogetherJSConfig_disableWebRTC = true,
+        TogetherJSConfig_getUserName = function(){return 'Easwaramoorthy S'; },
+
+        
+
+        TogetherJSConfig_hub_on= {"togetherjs.chat":togetherJsMessageReceived},
+
+        TogetherJSConfig_hubBase = "wss://www.edaplayground.com/togetherjs";
+
+
+//        TogetherJSConfig_findRoom = "edaplayground_com_users",
+//        TogetherJSConfig_suppressJoinConfirmation = true,
+//        TogetherJSConfig_suppressInvite = true,
+
+    // div.sectionTitle, .sectionTitle.sectionExpandable, .unselectable
+    // #leftPanel div.sectionExpandable, div.row > div.sectionExpandable
+    </script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/togetherjs.js.download"></script>
+
+    <!-- Code -->
+    <script>
+    // Globals
+      USE_GA = true,
+      SHARE_ON_SOCIAL =
+        true,
+      QUESTA_RUN =
+        false,
+      contextPath = "",
+      remoteUser = "karthickeaswar43815@psnacet.edu.in",
+      userId = "491723",
+      MAX_RESULT_LINES = 200,
+      TEXT_MAX_SIZE = 100000,
+      TOTAL_TEXT_MAX_SIZE = 1000000,
+      RUN_POLL_INTERVAL = 1000,
+      SIMULATORS_REQUIRING_VALIDATED = [1301, 1501, 1701, 1702],
+      DISABLE_TOGETHERJS_MIRRORING = false,
+      USER_CAN_USE_VALIDATED_SIMULATORS = true,
+      SAVE_BEFORE_CLOSE = false,
+      POP_UP_EPWAVE = false,
+      EDITOR_MODE = 'default';
+      SCREEN_MODE = 'default';
+    var MAX_TABS = 100;
+    var testbenchEditors = [];
+    testbenchEditors[0] = {};
+    testbenchEditors[0].name = "testbench";
+    testbenchEditors[0].code = "module delay_timer_tb;\r\n\r\n  reg clk;\r\n  reg start;\r\n  wire done;\r\n\r\n  \/\/ Instantiate the delay_timer module\r\n  delay_timer dut (\r\n    .clk(clk),\r\n    .start(start),\r\n    .done(done)\r\n  );\r\n\r\n  \/\/ Clock generation\r\n  always #5 clk = ~clk;\r\n\r\n  \/\/ Stimulus generation\r\n  initial begin\r\n    clk = 0;\r\n    start = 0;\r\n\r\n    \/\/ Dump VCD file and variables\r\n    $dumpfile(\"delay_timer_tb.vcd\");\r\n    $dumpvars(0, delay_timer_tb);\r\n\r\n    #10 start = 1;  \/\/ Start the delay timer\r\n    #100 start = 0; \/\/ Stop the delay timer\r\n\r\n    #100 $finish; \/\/ End the simulation\r\n  end\r\n\r\n  \/\/ Monitor\r\n  always @(posedge clk) begin\r\n    if (done)\r\n      $display(\"Delay timer done at time %0t\", $time);\r\n  end\r\n\r\nendmodule\r\n";
+    
+    var designEditors = [];
+    designEditors[0] = {};
+    designEditors[0].name = "design";
+    designEditors[0].code = "module delay_timer (\r\n  input wire clk,\r\n  input wire start,\r\n  output wire done\r\n);\r\n\r\n  reg [31:0] count;\r\n  reg done_reg;\r\n\r\n  always @(posedge clk) begin\r\n    if (start) begin\r\n      count <= 32\'hFFFFFFFF;  \/\/ Set delay time to 2^32 - 1 clock cycles\r\n      done_reg <= 0;\r\n    end\r\n    else if (count > 0) begin\r\n      count <= count - 1;\r\n      done_reg <= 0;\r\n    end\r\n    else if (count == 0) begin\r\n      done_reg <= 1;\r\n    end\r\n  end\r\n\r\n  assign done = done_reg;\r\n\r\nendmodule\r\n";
+    
+    var designTabsActiveIndex = 0;
+    
+    var testbenchTabsActiveIndex = 0;
+    
+
+    var sessionConfigExists =
+    true,
+      westSize = 0,
+      southSize = 0;
+
+    var USE_EMBED =
+        false,
+      embedParams = {};
+
+    var IS_VIEWING_AS_LAB = false;
+
+    // Cookie acceptance code
+    setTimeout(() => {
+      const banner = document.getElementById("cookie-notice-banner");
+      if (!window.localStorage.getItem("cookie-notice-seen")) {
+        const button = document.getElementById("cookie-notice-hide");
+        button.addEventListener('click', () => {
+          window.localStorage.setItem("cookie-notice-seen", 'true');
+          banner.style.bottom = "-10vh";
+          setTimeout(() => banner.remove(), 2000);
+        });
+        banner.style.removeProperty("visibility");
+        setTimeout(() => banner.style.removeProperty("bottom"), 100);
+      } else banner.remove();
+    }, 2000);
+
+    </script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/code.js.download"></script>
+    <script src="./DIGITAL DELAY TIMER - EDA Playground_files/home.js.download"></script>
+
+  
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./DIGITAL DELAY TIMER - EDA Playground_files/widget_iframe.2b2d73daf636805223fb11d48f3e94f7.html" title="Twitter settings iframe" style="display: none;"></iframe><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div id="" class="ui-layout-resizer ui-layout-resizer-north ui-layout-resizer-open ui-layout-resizer-north-open" style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; background: rgb(221, 221, 221); border: none; top: 40px; cursor: default; width: 1536px; height: 6px; left: 0px;"></div><div id="" class="ui-layout-resizer ui-layout-resizer-west ui-layout-resizer-open ui-layout-resizer-west-open" style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; background: rgb(221, 221, 221); border: none; left: 200px; cursor: default; height: 610px; width: 6px; top: 46px;"></div><div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable ui-resizable" aria-describedby="testbenchRemoveDialog" aria-labelledby="ui-id-2" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-2" class="ui-dialog-title">Remove File&nbsp;<a href="http://eda-playground.readthedocs.org/en/latest/settings.html#adding-files" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-info-circle"></i></a></span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="testbenchRemoveDialog" class="ui-dialog-content ui-widget-content">
+      Please confirm to remove:
+      <div id="testbenchRemoveName"></div>
+    </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-corner-all ui-widget">Remove</button><button type="button" class="ui-button ui-corner-all ui-widget">Cancel</button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable ui-resizable" aria-describedby="testbenchAddTabDialog" aria-labelledby="ui-id-3" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-3" class="ui-dialog-title">New File&nbsp;<a href="http://eda-playground.readthedocs.org/en/latest/settings.html#adding-files" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-info-circle"></i></a></span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="testbenchAddTabDialog" class="ui-dialog-content ui-widget-content">
+      <div class="addTabDialogError tabNameError" style="color:red;display:none">Filename must match regex:<br>^[a-zA-Z0-9_-]+[a-zA-Z0-9_.-]*$</div>
+      <div class="addTabDialogError tabDuplicateError" style="color:red;display:none">File already exists</div>
+      <div class="addTabDialogError tabIllegalPrefixError" style="color:red;display:none">Filename cannot start with "testbench." or "design."</div>
+      <div style="">
+        <form>
+          <fieldset class="ui-helper-reset">
+            <label for="tabName">Filename</label>
+            <input style="float:left" type="text" name="tabName" id="testbenchTabName" value="" maxlength="50" class="ui-widget-content ui-corner-all">
+            <button id="testbenchAddButton" type="button" class="btn btn-primary btn-xs" style="font-size:12px;margin-left:5px"><i class="fa fa-file"></i>&nbsp;Create file</button>
+          </fieldset>
+        </form>
+      </div>
+      <h4 style="margin:10px 0px">or</h4>
+      <span class="btn btn-primary btn-xs fileinput-button">
+        <i class="fa fa-upload"></i>
+        <span>Upload files...</span>
+        <input id="testbenchFileupload" type="file" multiple="">
+      </span>
+      <p style="font-size:0.8em">(drag and drop anywhere)</p>
+    </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-corner-all ui-widget">Cancel</button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable ui-resizable" aria-describedby="testbenchRenameTabDialog" aria-labelledby="ui-id-4" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-4" class="ui-dialog-title">Rename File&nbsp;<a href="http://eda-playground.readthedocs.org/en/latest/settings.html#adding-files" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-info-circle"></i></a></span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="testbenchRenameTabDialog" class="ui-dialog-content ui-widget-content">
+      <form>
+        <fieldset class="ui-helper-reset">
+          <label for="tabName">Filename</label>
+          <input type="text" name="tabName" id="testbenchNewTabName" value="" maxlength="50" class="ui-widget-content ui-corner-all">
+        </fieldset>
+      </form>
+      <div class="addTabDialogError tabNameError" style="color:red;display:none">Filename must match regex:<br>^[a-zA-Z0-9_-]+[a-zA-Z0-9_.-]*$</div>
+      <div class="addTabDialogError tabDuplicateError" style="color:red;display:none">File already exists</div>
+      <div class="addTabDialogError tabIllegalPrefixError" style="color:red;display:none">Filename cannot start with "testbench." or "design."</div>
+    </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-corner-all ui-widget">Rename</button><button type="button" class="ui-button ui-corner-all ui-widget">Cancel</button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable ui-resizable" aria-describedby="designRemoveDialog" aria-labelledby="ui-id-6" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-6" class="ui-dialog-title">Remove File&nbsp;<a href="http://eda-playground.readthedocs.org/en/latest/settings.html#adding-files" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-info-circle"></i></a></span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="designRemoveDialog" class="ui-dialog-content ui-widget-content">
+      Please confirm to remove:
+      <div id="designRemoveName"></div>
+    </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-corner-all ui-widget">Remove</button><button type="button" class="ui-button ui-corner-all ui-widget">Cancel</button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable ui-resizable" aria-describedby="designAddTabDialog" aria-labelledby="ui-id-7" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-7" class="ui-dialog-title">New File&nbsp;<a href="http://eda-playground.readthedocs.org/en/latest/settings.html#adding-files" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-info-circle"></i></a></span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="designAddTabDialog" class="ui-dialog-content ui-widget-content">
+      <div class="addTabDialogError tabNameError" style="color:red;display:none">Filename must match regex:<br>^[a-zA-Z0-9_-]+[a-zA-Z0-9_.-]*$</div>
+      <div class="addTabDialogError tabDuplicateError" style="color:red;display:none">File already exists</div>
+      <div class="addTabDialogError tabIllegalPrefixError" style="color:red;display:none">Filename cannot start with "testbench." or "design."</div>
+      <div style="">
+        <form>
+          <fieldset class="ui-helper-reset">
+            <label for="tabName">Filename</label>
+            <input style="float:left" type="text" name="tabName" id="designTabName" value="" maxlength="50" class="ui-widget-content ui-corner-all">
+            <button id="designAddButton" type="button" class="btn btn-primary btn-xs" style="font-size:12px;margin-left:5px"><i class="fa fa-file"></i>&nbsp;Create file</button>
+          </fieldset>
+        </form>
+      </div>
+      <h4 style="margin:10px 0px">or</h4>
+      <span class="btn btn-primary btn-xs fileinput-button">
+        <i class="fa fa-upload"></i>
+        <span>Upload files...</span>
+        <input id="designFileupload" type="file" multiple="">
+      </span>
+      <p style="font-size:0.8em">(drag and drop anywhere)</p>
+    </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-corner-all ui-widget">Cancel</button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable ui-resizable" aria-describedby="designRenameTabDialog" aria-labelledby="ui-id-8" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-8" class="ui-dialog-title">Rename File&nbsp;<a href="http://eda-playground.readthedocs.org/en/latest/settings.html#adding-files" style="text-decoration:none" target="_blank" class="docs-creator"><i class="fa fa-info-circle"></i></a></span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="designRenameTabDialog" class="ui-dialog-content ui-widget-content">
+      <form>
+        <fieldset class="ui-helper-reset">
+          <label for="tabName">Filename</label>
+          <input type="text" name="tabName" id="designNewTabName" value="" maxlength="50" class="ui-widget-content ui-corner-all">
+        </fieldset>
+      </form>
+      <div class="addTabDialogError tabNameError" style="color:red;display:none">Filename must match regex:<br>^[a-zA-Z0-9_-]+[a-zA-Z0-9_.-]*$</div>
+      <div class="addTabDialogError tabDuplicateError" style="color:red;display:none">File already exists</div>
+      <div class="addTabDialogError tabIllegalPrefixError" style="color:red;display:none">Filename cannot start with "testbench." or "design."</div>
+    </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-corner-all ui-widget">Rename</button><button type="button" class="ui-button ui-corner-all ui-widget">Cancel</button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div class="ui-multiselect-menu ui-widget ui-widget-content ui-corner-all yosysSynthesisOptions" style="width: 175px;"><div class="ui-widget-header ui-corner-all ui-multiselect-header ui-helper-clearfix" style="display: none;"><ul class="ui-helper-reset"><li class="ui-multiselect-close"><a href="https://edaplayground.com/x/efSc#" class="ui-multiselect-close docs-creator"><span class="ui-icon ui-icon-circle-close"></span></a></li></ul></div><ul class="ui-multiselect-checkboxes ui-helper-reset"><li class=" "><label for="ui-multiselect-yosysSynthesisOptions-option-0" title="" class="ui-corner-all"><input id="ui-multiselect-yosysSynthesisOptions-option-0" name="multiselect_yosysSynthesisOptions" type="checkbox" value="yosysABC" title=""><span> use ABC with cell library</span></label></li><li class=" "><label for="ui-multiselect-yosysSynthesisOptions-option-1" title="" class="ui-corner-all"><input id="ui-multiselect-yosysSynthesisOptions-option-1" name="multiselect_yosysSynthesisOptions" type="checkbox" value="yosysMemoryNoMap" title=""><span> memory -nomap</span></label></li><li class=" "><label for="ui-multiselect-yosysSynthesisOptions-option-2" title="" class="ui-corner-all"><input id="ui-multiselect-yosysSynthesisOptions-option-2" name="multiselect_yosysSynthesisOptions" type="checkbox" value="yosysFsmNoMap" title=""><span> fsm -nomap</span></label></li><li class=" "><label for="ui-multiselect-yosysSynthesisOptions-option-3" title="" class="ui-corner-all"><input id="ui-multiselect-yosysSynthesisOptions-option-3" name="multiselect_yosysSynthesisOptions" type="checkbox" value="yosysFsmSkip" title=""><span> skip FSM step</span></label></li></ul></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./DIGITAL DELAY TIMER - EDA Playground_files/saved_resource.html"></iframe><div class="dockmodal epwaveModal popped-out no-footer" style="height: auto; transition: right 0.3s ease 0s, left 0.3s ease 0s, top 0.3s ease 0s, bottom 0.3s ease 0s, height 0.3s ease 0s, width 0.3s ease 0s; width: auto; inset: 50px 1% 1%;"><div class="dockmodal-header"><a href="https://edaplayground.com/x/efSc#" class="header-action action-close docs-creator" title="Close"><i class="icon-dockmodal-close"></i></a><a href="https://edaplayground.com/x/efSc#" class="header-action action-minimize docs-creator" title="Minimize"><i class="icon-dockmodal-minimize"></i></a><div class="title-text">EPWave</div></div><div class="dockmodal-body"><div id="epwaveModal"></div><iframe id="epwaveFrame" width="100%" height="100%" "="" frameborder="0" src="./DIGITAL DELAY TIMER - EDA Playground_files/launchEpwave.html" style="visibility: visible; width: 100%;"></iframe></div></div><div class="dockmodal-overlay" style="display: block;"></div></body></html>
